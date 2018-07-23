@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="{% if page.is_homepage? == true %}full{% endif %}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page_title }}</title>
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet'>
+    <link href="hamburgers.css" rel="stylesheet">
+    <link href="theme.scss" rel="stylesheet">
+    <link href="fonts.css" rel="stylesheet">
+    <link href="victoryresources.scss" rel="stylesheet">
+    <link href="mobile.scss" rel="stylesheet">
+    {{ content_for_header }}
+    <script type="text/javascript">
+      NB.appConfig.userIsLoggedIn = {{request.logged_in?}};
+    </script>
+  </head>
+  
+  <body class="{{ page.page_class_name }} page-{{ request.template | replace: '_', '-' }} js {% unless page.slug == 'landing_page' %}body-padding{% endunless %}">
+    <div id="wrapper">
+      {{ content_for_notifications }}
+      
+      {% if page.slug == 'landing_page' %} 
+      {% include 'victory_nav' %}
+      {% elsif page.is_homepage? == false %}
+      {% include 'victory_nav_alt' %}
+      {% endif %}
+
+      {% if request.is_sidebar? %}
+      {% include "columns_1" %}
+      {% else %}
+      {% include "columns_1" %}
+      {% endif %}
+    </div>    
+    <footer>
+      {{ content_for_footer }}
+      {% include "victory_footer" %}
+    </footer>
+
+    <script src="bootstrap.js"></script>
+    {% if page.slug == 'landing_page' %}
+    <script src="victory.js"></script>
+    {% else %}
+    <script>
+      $(document).ready(function() {
+        $('button').click(function(){
+          $('.hamburger').toggleClass('is-active');
+        });
+      });
+    </script>
+    {% endif %}
+    {% if page.slug == 'stock_quote' %}
+    <script src="stockquote.js"></script>
+    {% endif %}
+
+  </body>
+</html>
+

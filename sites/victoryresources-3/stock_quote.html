@@ -1,0 +1,34 @@
+<section class="splash-header" style="{% if page.features.size > 0 %}{% for feature in page.features limit: 1 %}background-image: url({{ feature.image_url }}); background-size: cover;{% endfor %} {% endif %} {% if page.features.size == 0 %} background-image: url(https://d3n8a8pro7vhmx.cloudfront.net/themes/5aa1dc39ed0e46a369000000/attachments/original/1521687823/minerals.jpg?1521687823); background-size: cover; {% endif %}">
+  <div class='overlay'></div>
+  <h1 class="text-center">
+    {{ page.headline }}
+  </h1>
+</section>
+<section class="page-body">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2 stock-quote">
+        <h2>
+          Toronto Stock Exchange
+          <small>
+            V:VR
+          </small>
+        </h2>
+        <hr>
+        <ul class="list-group">
+          <li class="list-group-item">Open:<span id="1_open"></span></li>
+          <li class="list-group-item">High:<span id="2_high"></span></li>
+          <li class="list-group-item">Low:<span id="3_low"></span></li>
+          <li class="list-group-item">Close:<span id="4_close"></span></li>
+          <li class="list-group-item">Volume:<span id="5_volume"></span></li>
+        </ul>
+        <p>The most recent data point is the cumulative prices and volume information of the current trading day, updated realtime.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{% subpage "newsletter_sign_up" with "newsletter" %}

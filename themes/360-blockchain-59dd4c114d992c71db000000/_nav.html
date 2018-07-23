@@ -1,0 +1,48 @@
+<nav class="navbar navbar-default navbar-fixed-top navbar-custom" role="navigation">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+            <a class="navbar-brand scrolltarget" href="{% if page.is_homepage? %}#top{% else %}/{% endif %}"><img alt="{{ site.long_name }}" src="https://d3n8a8pro7vhmx.cloudfront.net/themes/59dd4c114d992c71db000000/attachments/original/1513295927/360-blockchain-inc-logo.png?1513295927"></a>
+
+        </div>
+        <div id="menu-collapse" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            {% for child in site.root_nav_pages %}
+            {% if child.leaf? or child.nav_children.size == 0 %}
+              {% if child.slug == 'about_us' or child.slug == 'how_we_invest' or child.slug == 'our_categories' %}
+                <li>
+                  <a href="{% if page.is_homepage? %}#{{ child.slug }}{% else %}/#{{ child.slug }}{% endif %}" class="scrolltarget">{{ child.name }}</a>
+                </li>
+              {% else %}
+                <li {% if child.is_or_is_ancestor_of_current_page? %}class="active"{% endif %}>
+                  <a href="{{ child.url }}">{{ child.name }}</a>
+                </li>
+              {% endif %}
+            {% else %}
+            <li class="{% if child.is_or_is_ancestor_of_current_page? %}active{% endif %} dropdown">
+              <a href="{{ child.url }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ child.name }} <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                {% if site.show_parent_in_nav_dropdown? %}
+                  <li><a href="{{ child.url }}">{{ child.name }}</a></li>
+                {% endif %}
+                {% for child2 in child.nav_children %}
+                  <li><a href="{{ child2.url }}">{{ child2.name }}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

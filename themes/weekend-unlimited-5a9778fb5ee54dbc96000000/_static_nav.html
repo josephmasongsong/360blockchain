@@ -1,0 +1,69 @@
+
+<nav class="weekend-navbar navbar-static-top shrink hidden-sm hidden-xs">
+  <div class="container">
+    <ul class="list-inline">
+      <li><a href="{% if page.slug == 'landing_page' %}#ourPositioning{% else %}/landing_page#ourPositioning{% endif %}" class="scrolltarget">Our Positioning</a></li>
+      <li><a href="{% if page.slug == 'landing_page' %}#ourApproach{% else %}/landing_page#ourApproach{% endif %}" class="scrolltarget">Our Approach</a></li>
+      <li><a href="{% if page.slug == 'landing_page' %}#ourFacilities{% else %}/landing_page#ourFacilities{% endif %}" class="scrolltarget">Our Facilities</a></li>
+      <li><a href="{% if page.slug == 'landing_page' %}#ourBrands{% else %}/landing_page#ourBrands{% endif %}" class="scrolltarget">Our Brands</a></li>
+    </ul>
+    </span>
+    <a href="/landing_page" style="padding:0; margin: 0 1.5rem 0 0;"><img src="{{ site.meta_image_url }}" alt="" id="logo-navbar"></a>
+    <ul class="list-inline">
+      <li><a href="{% if page.slug == 'landing_page' %}#ourTechnologies{% else %}/landing_page#ourTechnologies{% endif %}" class="scrolltarget">Our Technologies</a></li>
+      {% for child in site.root_nav_pages %}
+      {% if child.leaf? or child.nav_children.size == 0 %}
+      <li {% if child.is_or_is_ancestor_of_current_page? %}class="active"{% endif %}>
+        <a href="{{ child.url }}">{{ child.name }}</a>
+      </li>
+      {% else %}
+      <li class="{% if child.is_or_is_ancestor_of_current_page? %}active{% endif %} dropdown">
+        <a href="{{ child.url }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ child.name }} <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          {% if site.show_parent_in_nav_dropdown? %}
+            <li><a href="{{ child.url }}">{{ child.name }}</a></li>
+          {% endif %}
+          {% for child2 in child.nav_children %}
+            <li><a href="{{ child2.url }}">{{ child2.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>    
+  </div>
+</nav>
+
+<nav class="weekend-navbar-mobile navbar navbar-default navbar-static-top hidden-md hidden-lg">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/landing_page">
+        <img src="{{ site.meta_image_url }}" alt="">
+      </a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="{% if page.slug == 'landing_page' %}#ourPositioning{% else %}/landing_page#ourPositioning{% endif %}" class="scrolltarget" data-toggle="collapse" data-target=".navbar-collapse.in">Our Positioning</a></li>
+      <li><a href="{% if page.slug == 'landing_page' %}#ourApproach{% else %}/landing_page#ourApproach{% endif %}" class="scrolltarget" data-toggle="collapse" data-target=".navbar-collapse.in">Our Approach</a></li>
+      <li><a href="{% if page.slug == 'landing_page' %}#ourFacilities{% else %}/landing_page#ourFacilities{% endif %}" class="scrolltarget" data-toggle="collapse" data-target=".navbar-collapse.in">Our Facilities</a></li>
+      <li><a href="{% if page.slug == 'landing_page' %}#ourBrands{% else %}/landing_page#ourBrands{% endif %}" class="scrolltarget" data-toggle="collapse" data-target=".navbar-collapse.in">Our Brands</a></li>
+      <li><a href="{% if page.slug == 'landing_page' %}#ourTechnologies{% else %}/landing_page#ourTechnologies{% endif %}" class="scrolltarget" data-toggle="collapse" data-target=".navbar-collapse.in">Our Technologies</a></li>
+
+      {% for child in site.root_nav_pages %}
+      {% if child.leaf? or child.nav_children.size == 0 %}
+      <li {% if child.is_or_is_ancestor_of_current_page? %}class="active"{% endif %}>
+        <a href="{{ child.url }}">{{ child.name }}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>

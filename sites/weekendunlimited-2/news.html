@@ -1,0 +1,40 @@
+
+<div class="basic-page-header">
+  <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5a9778fb5ee54dbc96000000/attachments/original/1521494719/blobs-01.png?1521494719" alt="">
+  <h1>{{page.headline}}</h1>
+</div>
+
+
+
+
+<section class="bg-white basic-page-section">
+  <div class="container">
+
+    <ul class='list-inline subnavigation'>
+      <li class='active'><a href="/news">News</a></li>
+      <li><a href="/press">Press</a></li>
+      <li><a href="/media">Media</a></li>
+    </ul>
+
+    {% for post in page.blog.most_recent_blog_posts %}
+    
+    <a href="{{ post.url }}"><h2>{{ post.headline }}</h2></a>
+    <span class="date">{{ post.published_at | date: '%B %d, %Y %l:%M %p' }}</span>
+    {{ post.blog_post.content }}
+    
+    {% if post.blog_post.is_extended? %}
+    <span class='read-more'><a href='{{ post.url }}'>More</a></span>
+    {% endif %}
+
+    <hr>     
+    
+    {% endfor %}
+
+    {{ page.blog.most_recent_blog_posts | paginate prev_label: "&laquo;" next_label: "&raquo;" | replace:'<div class="pagination">','<nav class="pagination-container">' | replace:'<ul>','<ul class="pagination">' | replace:'</div>','</nav>' }}
+
+  </div>  
+</section>
+
+{% subpage "newsletter" with "newsletter" %}
+
+

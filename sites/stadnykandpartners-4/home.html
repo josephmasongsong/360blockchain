@@ -1,0 +1,17 @@
+<section id="home" style="background-image: url({% for feature in page.features limit: 1 %}{{ feature.image_url }}{% endfor %});">
+    <ul class="list-inline cities">
+        <li>new york</li>
+        <li>toronto</li>
+        <li>vancouver</li>
+    </ul>
+    <div class="headline">
+        <h1>{% for feature in page.features limit: 1 %}{{ feature.headline }}{% endfor %}</h1>
+        <p>
+            {{ page.basic.content }}
+        </p>
+    </div>
+</section>
+{% subpage 'story' with 'story' %}
+{% subpage 'services' with 'services' %}
+{% subpage 'people' with 'people' %}
+{% subpage 'portfolio' with 'portfolio' %}

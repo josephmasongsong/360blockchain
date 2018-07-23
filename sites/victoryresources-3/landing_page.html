@@ -1,0 +1,16 @@
+<section class='splash-image' id='home' style='{% if page.features.size > 0 %}{% for feature in page.features limit: 1 %}background-image: url({{ feature.image_url }});{% endfor %}{% endif %}; background-size: cover;'>
+  <div class='container'>
+    <h1>
+      {{ page.headline }}
+    </h1>
+  </div>
+</section>
+
+
+{% subpage 'about' with 'black_box' %}
+{% subpage 'projects' with 'projects' %}
+{% subpage 'strategic_mineral_focus' with 'minerals' %}
+{% subpage 'strategic_acquisition_focus' with 'white_box' %}
+
+{% subpage "newsletter_sign_up" with "newsletter" %}
+

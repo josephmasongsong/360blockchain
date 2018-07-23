@@ -1,0 +1,45 @@
+
+{% for child in page.children limit: 1 %}
+<section class="container-fluid" id="projects">
+	<div class="row no-gutters">
+		<div class="col-sm-6 no-padding">
+			<div class="project-container">
+				<div class="project-content-container">
+					<h2>
+						{{ child.headline }}
+						<small>
+							{{ child.excerpt }}
+						</small>
+					</h2>
+					<hr>
+					{{ child.basic.content }}
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 no-padding">
+			<div class="project-image" style="{% if child.features.size > 0 %}{% for feature in child.features limit: 1 %}background-image: url({{ feature.image_url }});{% endfor %}{% endif %};">
+			</div>
+		</div>
+		{% for descendant in child.children limit: 1 %}
+		<div class="col-sm-6 no-padding">
+			<div class="project-image" style="{% if descendant.features.size > 0 %}{% for feature in descendant.features limit: 1 %}background-image: url({{ feature.image_url }});{% endfor %}{% endif %};">
+			</div>
+		</div>
+		<div class="col-sm-6 no-padding">
+			<div class="project-container">
+				<div class="project-content-container">
+					<h2>
+						{{ descendant.headline }}
+						<small>
+							{{ descendant.excerpt }}
+						</small>
+					</h2>
+					<hr>
+					{{ descendant.basic.content }}
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</section>
+{% endfor %}

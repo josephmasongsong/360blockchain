@@ -1,0 +1,22 @@
+.fp-controlArrow.fp-prev {
+    left: 15px;
+    background: url('../images/rsz_leaf-left.png') no-repeat;
+}
+.fp-controlArrow.fp-next {
+    right: 15px;
+    background: url('../images/rsz_leaf-right.png') no-repeat;
+}
+.fp-controlArrow {
+    position: absolute;
+    z-index: 4;
+    border: 0 !important;
+    top: 50%;
+    cursor: pointer;
+    width: 52px !important; 
+    height: 52px !important; 
+    margin-top: -26px;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  background: #fff;
+}

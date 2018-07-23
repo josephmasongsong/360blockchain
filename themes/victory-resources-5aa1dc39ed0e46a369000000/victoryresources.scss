@@ -1,0 +1,284 @@
+$brand-orange: #f19224;
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Brandon Grotesque";
+  color: #333;
+  &.body-padding {
+    padding-top: 120px;
+  }
+}
+
+a {
+  color: $brand-orange;
+}
+
+.alert {
+  margin-bottom: 0;
+}
+
+#wrapper {
+  overflow-x: hidden;
+  .container, .container-fluid {
+    padding: 0;
+    position: relative;
+  }
+}
+
+@import "victory_navbar";
+
+.splash-image, .splash-header {
+  position: relative;
+  color: white;
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+  }
+  .container {
+    position: absolute !important;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);    
+  }
+}
+
+.splash-image {
+  height: 100vh;
+}
+.splash-header {
+  padding: 7rem;
+  background-size: cover;
+  background-color: $brand-orange;
+  h1 { 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+  }
+}
+
+.black-box, .white-box {
+  padding: 7rem;
+  .block-quote {
+    font-size: 1.875rem;
+    font-weight: 400;    
+    border-left: 2rem solid $brand-orange;
+    p {
+      padding-left: 3rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.black-box {
+  background-color: #111;
+  color: #fff;
+}
+
+.minerals {
+  padding: 4rem 0;
+  background-color: #111;
+  .minerals-container {
+    font-weight: 300;
+    padding: 4rem;
+    background-color: #eee;
+    font-size: 1.25rem;
+    hr {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h2 {
+      text-transform:uppercase;
+      font-size: 2.125rem;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+      margin-top: 0;
+    }
+    p {
+      border-bottom: #fff;
+      padding-bottom: 0.75rem;
+      margin-bottom: 0.75rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .victory-icon {
+      width: 64px;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.white-box {
+  background-color: #fff;
+  color: #333;
+  .block-quote {
+    font-weight: normal;
+    font-size: 1.5rem;
+    p {
+      margin-bottom: 1.5rem;
+    }
+    ul {
+      list-style: none;
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(#000, 0.35);
+}
+
+hr {
+  border-top: 3px solid #f19224;
+  width: 64px;
+  margin: 0 0 1.5rem;  
+}
+
+#projects {
+  padding: 0;
+  .no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .no-padding {
+    padding: 0;
+  }
+  .project-container {
+    min-height: 30rem;
+    width: 100%;
+    padding: 4rem;
+    .project-content-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: 300;
+      font-size: 1.125rem;
+      width: calc(100% - 8rem);
+      h2 {
+        font-size: 2.125rem;
+        text-transform: uppercase;
+        line-height: 1.4;
+        margin: 0 0 1.5rem;
+        small {
+          display: block;
+          text-transform: none;
+        }
+      }
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+        li {
+          margin-bottom: .75rem;
+        }
+      }
+    }
+  }
+  .project-image {
+    min-height: 30rem; 
+    width: 100%; 
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.page-body {
+  padding: 4rem 0;
+  .bio, .news-excerpt, .legal-body {
+    font-size: 1.25rem;
+    font-weight: 300;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    &:last-child {
+      border-bottom: 0;
+    }
+    .read-more {
+      display: block;
+      padding: 0.75rem 0;
+    }
+  }
+  .legal-body {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  h1, h2, h3 {
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin: 0 0 1.5rem;
+    small {
+      display: block;
+      text-transform: none;
+    }
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.125rem;
+  }
+}
+
+.stock-quote {
+  .list-group {
+    .list-group-item {
+      border-left: 0;
+      border-right: 0;
+      padding: 0.75rem 0;
+      font-size: 1.25rem;
+      font-weight: 300;
+      border-color: #f0f0f0;
+      &:first-child {
+        border-top: 0;
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+      span {
+        float: right;
+      }
+    }
+  }  
+}
+
+.contact-body {
+  .address {
+    ul {
+      padding-left: 0;
+    }
+    li {
+      margin: 1.25rem 0;
+      list-style: none;
+      a {
+        color: $brand-orange;
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-weight: 300;    
+      }      
+    }
+    .fa {
+      color: $brand-orange;
+      margin-right: .75rem;
+      font-size: 1.5rem;
+    }    
+  }
+}
+
+
+@import "victory_footer";

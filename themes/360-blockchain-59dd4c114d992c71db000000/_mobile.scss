@@ -1,0 +1,143 @@
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 767px) {
+  body {
+    padding-top: 60px;
+  }
+  .navbar-collapse {
+      min-height: 80vh;
+  }
+  .navbar-custom .navbar-brand img {
+      height: 60px;
+  }
+  .navbar-toggle {
+    margin-top: 14px;
+    margin-right: 0;
+  }
+  .hp-content .content-container .center-logo {
+    width: 279px;
+  }
+  .hp-content .content-container .content {
+    margin-left: 15px; 
+    margin-right: 15px;
+  }
+  .hp-content .content-container .headline {
+    font-size: 42px;
+  }
+  .hpsub-cat .content-container .content {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .hpsub-cat .col-md-3 .cat-card, .hpsub-cat .col-sm-6 .cat-card {
+    min-height: inherit;
+    margin-bottom: 30px;
+  } 
+  .hpsub-content {
+      height: inherit;
+  }
+  .hpsub-content .col-sm-5 .content-container {
+      margin-top: 20px;
+    top: inherit;
+    transform: none;
+  }
+  .basic-page-header .headline {
+    font-size: 30px;
+      margin-left: 15px;
+  }
+  .basic-page-subnav {
+    padding: 0;
+  }
+  .basic-page-subnav .col-xs-4 {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .basic-page-subnav .col-xs-4 a {
+    font-size: 12px;
+  }
+  .newsletter form {
+    margin-top: 30px;
+
+  }
+  .newsletter .content-container .headline, .basic-page-content .team-member .headline, .basic-page-content .page-excerpt .headline {
+    font-size: 28px;
+  }
+  .newsletter form .btn-primary {
+    margin-top: 10px;
+  }
+  .basic-page-content .page-excerpt .headline small {
+      display: block;
+      margin: 15px 0 0 0;
+  }
+  footer {
+    padding: 10px 0 10px;
+  }
+  footer .footer-logo .legal-text {
+      margin-left: 15px;
+  }
+  footer .footer-nav {
+    margin: 15px 0;
+      padding: 15px 15px;
+      border-top: 1px solid #11121d;
+      border-bottom: 1px solid #11121d;
+      border-left: 0;
+      border-right: 0;
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  .hp-content .content-container .center-logo {
+      width: 240px;
+      margin-bottom: 10px;
+  }
+  .hp-content .content-container .headline {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  .hp-content .content-container .content {
+    font-size: 14px;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation: portrait)  {
+  body {
+    padding-top: 60px;
+  }
+  .navbar-custom .navbar-nav>li>a {
+    padding: 20px 10px;
+    font-size: 13px;
+  }
+  .navbar-custom .navbar-brand img {
+    height: 60px;
+  }
+
+  .hpsub-cat .col-sm-6 .cat-card {
+    margin-bottom: 30px;
+    min-height: 347px;
+  }
+  .about-us {
+    margin-left: 4.166665%;
+  }
+  .hpsub-content {
+    height: inherit;
+  }
+  .hpsub-content .hpsub-bg {
+    height: 400px;
+  }
+  .hpsub-content .col-md-5 .content-container, .hpsub-content .col-sm-6 .content-container, .hpsub-content .col-sm-5 .content-container {
+    margin-top: 30px;
+  }
+  .hpsub-content .col-md-5 .content-container .content, .hpsub-content .col-sm-6 .content-container .content, .hpsub-content .col-sm-5 .content-container .content {
+    font-size: 14px;
+    p {
+      margin-bottom: 10px;
+    }
+    .headline {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}

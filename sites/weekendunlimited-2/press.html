@@ -1,0 +1,37 @@
+
+
+
+<div class="basic-page-header">
+  <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5a9778fb5ee54dbc96000000/attachments/original/1521494719/blobs-01.png?1521494719" alt="">
+  <h1>{{page.headline}}</h1>
+</div>
+
+
+
+<section class="bg-white basic-page-section">
+  <div class="container">
+
+    <ul class='list-inline subnavigation'>
+      <li><a href="/news">News</a></li>
+      <li class='active'><a href="/press">Press</a></li>
+      <li><a href="/media">Media</a></li>
+    </ul>
+
+    <div class="row">
+        {% assign children = page.children | sort: 'published_at' | reverse %}
+
+        {% for child in children %}
+        <div class="page-excerpt col-sm-12" style="padding: 20px 0; border-bottom: 1px solid #eee;">
+          <img src="{% for feature in child.features limit: 1 %}{{ feature.image_url }}{% endfor %}" style="max-width: 300px; margin-bottom: 0px;">
+          <h2 class="headline"><a href="{{ child.excerpt }}">{{ child.headline }}</a>
+            <small style="display: block; margin: 10px 0 0 0;">{{ child.published_at | date: '%B %d, %Y' }}</small>
+          </h2>
+
+        </div>
+        {% endfor %}
+    </div>
+
+  </div>  
+</section>
+
+{% subpage "newsletter" with "newsletter" %}

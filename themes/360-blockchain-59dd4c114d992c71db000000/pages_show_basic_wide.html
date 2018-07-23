@@ -1,0 +1,204 @@
+<section class="basic-page-header">
+  {% if page.parent.slug == 'company' %}
+    <h1 class="headline">{{ page.parent.headline }} // <span>{{ page.headline }}</span></h2>
+  {% else %}
+    <h1 class="headline"><span>{{ page.headline }}</span></h2>
+  {% endif %}
+</section>
+
+{% if page.parent.slug == 'company' %}
+<section class="basic-page-subnav">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-3">
+          <div class="row">
+            <div {% if page.slug == 'stock_quote' %}class="active col-xs-4"{% else %}class="col-xs-4"{% endif %}>
+              <a href="/stock_quote">Stock Quote</a>
+            </div>    
+            <div {% if page.slug == 'directors_management' %}class="active col-xs-4"{% else %}class="col-xs-4"{% endif %}>
+              <a href="/directors_management">Directors & Management</a>
+            </div>
+            <div {% if page.slug == 'investors' %}class="active col-xs-4"{% else %}class="col-xs-4"{% endif %}>
+              <a href="/investors">Investors</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if page.slug == 'press' or page.slug == 'media' %}
+<section class="basic-page-subnav">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-3">
+          <div class="row">
+            <div {% if page.slug == 'news' %}class="active col-xs-4"{% else %}class="col-xs-4"{% endif %}>
+              <a href="/news">News</a>
+            </div>    
+            <div {% if page.slug == 'press' %}class="active col-xs-4"{% else %}class="col-xs-4"{% endif %}>
+              <a href="/press">Press</a>
+            </div>
+            <div {% if page.slug == 'media' %}class="active col-xs-4"{% else %}class="col-xs-4"{% endif %}>
+              <a href="/media">Media</a>
+            </div>  
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+
+{% if page.slug == 'contact' %}
+  <div class="row">
+
+    <div class="col-sm-6 sq-content mb">
+
+    </div>
+
+    <div class="col-sm-6 sq-content mb">
+
+    </div>
+  </div>
+
+{% endif %}
+
+<section class="basic-page-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1">
+
+        {% unless page.slug == 'contact' %}
+          {% if page.parent.slug == 'media' %}
+          <div class="excerpt">
+            {{ page.excerpt }}
+          </div>
+          {% endif %}
+        <div class="content">
+          {{ page.basic.content }}
+        </div>
+        {% else %}
+          <div class="row">
+            <div class="col-sm-6 sq-content mb">
+              {{ page.basic.content }}
+            </div>
+
+            <div class="col-sm-5 col-sm-offset-1 sq-content mb">
+              {{ page.excerpt }}
+            </div>
+          </div>
+        {% endunless %}
+
+
+      {% if page.slug == 'stock_quote' %}
+        <div class="row">
+          <div class="col-sm-6 sq-content mb">
+            <h2 class="headline">
+              Canadian Securities Exchange
+              <!-- <small>Real time, 15 minute delayed stock quote</small> -->
+            </h2>
+            <p class="symbol"><strong>CODE.CN</strong></p>
+
+            <ul class="list-group">
+              <li class="list-group-item">Open:<span id="1_open"></span></li>
+              <li class="list-group-item">High:<span id="2_high"></span></li>
+              <li class="list-group-item">Low:<span id="3_low"></span></li>
+              <li class="list-group-item">Close:<span id="4_close"></span></li>
+              <li class="list-group-item">Volume:<span id="5_volume"></span></li>
+            </ul>
+          </div>
+
+          <div class="col-sm-6 sq-content mb">
+            <h2 class="headline">
+              Frankfurt Stock Exchange
+              <!-- <small>Real time, 15 minute delayed stock quote</small> -->
+            </h2>
+            <p class="symbol"><strong>C5B.F</strong></p>
+
+            <ul class="list-group">
+              <li class="list-group-item">Open:<span id="1-open"></span></li>
+              <li class="list-group-item">High:<span id="2-high"></span></li>
+              <li class="list-group-item">Low:<span id="3-low"></span></li>
+              <li class="list-group-item">Close:<span id="4-close"></span></li>
+              <li class="list-group-item">Volume:<span id="5-volume"></span></li>
+            </ul>
+          </div>
+          <div class="col-sm-12 sq-content hr">
+            <p class="symbol"><strong>The most recent data point is the cumulative prices and volume information of the current trading day, updated realtime.</strong></p>
+          </div>
+        </div>
+      {% endif %}
+
+      {% if page.slug == 'investors' %}
+        <div class="row">
+          {% for child in page.children %}
+            <div class="col-sm-6 sp-content">
+              <h2 class="headline">
+                {{ child.headline }}
+              </h2>
+              <div class="content">
+                {{ child.basic.content }}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+
+      {% if page.slug == 'media' %}
+        <div class="row">
+          {% assign children = page.children | sort: 'published_at' | reverse %}
+
+          {% for child in children %}
+
+            <div class="col-sm-6 media-content">
+              {{ child.excerpt }}
+              <h2 class="headline">
+                {{ child.headline }}
+                <small style="display: block; margin: 10px 0 0 0;">{{ child.published_at | date: '%B %d, %Y %l:%M %p' }}</small>
+              </h2>
+              <div class="content">
+                {{ child.basic.content }}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if page.slug == 'press' %}
+          {% assign children = page.children | sort: 'published_at' | reverse %}
+
+        {% for child in children %}
+        <div class="page-excerpt" id="blog-post-page-{{ child.id }}">
+          <img src="{% for feature in child.features limit: 1 %}{{ feature.image_url }}{% endfor %}" style="max-width: 300px; margin-bottom: 20px;">
+          <h2 class="headline"><a href="{{ child.excerpt }}">{{ child.headline }}</a>
+            <small style="display: block; margin: 10px 0 0 0;">{{ child.published_at | date: '%B %d, %Y' }}</small>
+          </h2>
+
+        </div>
+        {% endfor %}
+
+      {% endif %}
+
+
+        {% if page.slug == 'directors_management' %}
+          {% for child in page.children %}
+            <div class="team-member">
+              <h2 class="headline">{{ child.headline }} <small>{{ child.excerpt }}</small></h2>
+              <div class="content">{{ child.basic.content }}</div>              
+            </div>
+          {% endfor %}
+        {% endif %}
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+{% subpage "newsletter" with "newsletter" %}
+

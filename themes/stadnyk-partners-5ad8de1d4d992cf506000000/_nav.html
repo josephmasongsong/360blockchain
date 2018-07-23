@@ -1,0 +1,91 @@
+{% if page.is_homepage? == true%}
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+    <a class="navbar-brand hidden-sm hidden-md hidden-lg hidden-xl" href="/">
+        <img src="{{ site.header_image_url_960 }}" style="padding: 15px;">
+    </a>
+
+      <button class="hamburger hamburger--squeeze navbar-toggle collapsed" type="button" data-target=".navbar-collapse" data-toggle='collapse' type='button'>
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>  
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav nav-justified">
+            <li>
+                <a href="#story" class="scrolltarget">
+                    <span>Our Story</span>
+                </a>
+            </li>
+            <li>
+                <a href="#services" class="scrolltarget">
+                    <span>Our Services</span>
+                </a>
+            </li>
+            <li class="hidden-xs">
+                <a class="navbar-brand" href="#home">
+                    <img src="{{ site.header_image_url_960 }}" style="width: 240px; display: inline;">
+                </a>
+            </li>
+            <li>
+                <a href="#people" class="scrolltarget">
+                    <span>Our People</span>
+                </a>
+            </li>
+            <li>
+                <a href="#portfolio" class="scrolltarget">
+                    <span>Our Portfolio</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+{% else %}
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+    <a class="navbar-brand hidden-sm hidden-md hidden-lg hidden-xl" href="/">
+        <img src="{{ site.header_image_url_960 }}" style="padding: 15px;">
+    </a>
+      <button class="hamburger hamburger--squeeze navbar-toggle collapsed" type="button" data-target=".navbar-collapse" data-toggle='collapse' type='button'>
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>  
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav nav-justified">
+            <li>
+                <a href="/#story" class="scrolltarget">
+                    <span>Our Story</span>
+                </a>
+            </li>
+            <li>
+                <a href="/#services" class="scrolltarget">
+                    <span>Our Services</span>
+                </a>
+            </li>
+            <li class="hidden-xs">
+                <a class="navbar-brand" href="/">
+                    <img src="{{ site.header_image_url_960 }}" style="width: 240px; display: inline;">
+                </a>
+            </li>
+            <li>
+                <a href="/#people" class="scrolltarget">
+                    <span>Our People</span>
+                </a>
+            </li>
+            <li>
+                <a href="/#portfolio" class="scrolltarget">
+                    <span>Our Portfolio</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+{% endif %}

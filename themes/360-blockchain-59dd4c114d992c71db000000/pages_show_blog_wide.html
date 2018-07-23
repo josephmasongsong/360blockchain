@@ -1,0 +1,67 @@
+<section class="basic-page-header">
+  <h1 class="headline"><span>{{ page.headline }}</span></h2>
+</section>
+
+<section class="basic-page-subnav">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-3">
+          <div class="row">
+            <div {% if page.slug == 'news' %}class="active col-xs-4"{% else %}class="col-xs-4"{% endif %}>
+              <a href="/news">News</a>
+            </div>    
+            <div {% if page.slug == 'press' %}class="active col-xs-4"{% else %}class="col-xs-4"{% endif %}>
+              <a href="/press">Press</a>
+            </div>
+            <div {% if page.slug == 'media' %}class="active col-xs-4"{% else %}class="col-xs-4"{% endif %}>
+              <a href="/media">Media</a>
+            </div>          
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="basic-page-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1">
+        <div class="content">
+          {{ page.basic.content }}
+        </div>
+
+        {% for post in page.blog.most_recent_blog_posts %}
+        <div class="page-excerpt" id="blog-post-page-{{ post.id }}">
+          <h2 class="headline"><a href="{{ post.url }}">{{ post.headline }}</a>
+            <small style="display: block; margin: 10px 0 0 0;">{{ post.published_at | date: '%B %d, %Y %l:%M %p' }}</small>
+          </h2>
+
+
+
+          <div class="excerpt">
+            {{ post.blog_post.content }}
+            {% if post.blog_post.is_extended? %}
+            <span class='read-more'><a href='{{ post.url }}'>More</a></span>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      {{ page.blog.most_recent_blog_posts | paginate prev_label: "&laquo;" next_label: "&raquo;" | replace:'<div class="pagination">','<nav class="pagination-container">' | replace:'<ul>','<ul class="pagination">' | replace:'</div>','</nav>' }}
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+{% subpage "newsletter" with "newsletter" %}
+
+
+
+
+
+
+

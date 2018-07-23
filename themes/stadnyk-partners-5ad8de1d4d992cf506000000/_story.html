@@ -1,0 +1,14 @@
+<section class="story-section container-fluid" id="story">
+    <div class="row no-gutter row-eq-height">
+        <div class="col-sm-4">
+            <div class="story-content">
+                <h2>{{ page.headline }}</h2>
+                {{ page.basic.content }}
+                <a href="/our_story">Learn More</a>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="story-photo" style="background-image: url({% for feature in page.features limit: 1 %}{{ feature.image_url }}{% endfor %});"></div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,15 @@
+.pagination-container {
+	border-top: 0 !important;
+	margin-top: 0 !important;
+	text-align: center;
+	.pagination li > a {
+		border: 0;
+		color: $brand-colour;
+		font-size: 1.125rem;
+	}
+	.pagination > .active > a {
+		border-color: $brand-colour;
+		background-color: $brand-colour;
+		color: #fff;
+	}
+}

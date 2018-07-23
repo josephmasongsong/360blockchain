@@ -1,0 +1,21 @@
+
+
+
+
+
+<div id="fullpage">
+  <section class="section fp-auto-height bg-white blog-post">
+    <div class="container">
+
+		<h1 class="news-title">{{ page.headline }}</h1>
+		<span class='date'>{{ page.published_at | date: '%B %d, %Y %l:%M %p' }}</span>
+		{{ page.blog_post.content_full }}
+		<div class="like-page">
+			{% include "like_page" %}				
+		</div>
+
+    </div>  
+
+  </section>
+  {% subpage "newsletter" with "newsletter" %}
+</div>  

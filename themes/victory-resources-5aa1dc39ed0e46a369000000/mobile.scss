@@ -1,0 +1,180 @@
+
+
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+
+@media only screen and (max-width : 992px) {
+
+}
+
+
+@media only screen and (max-width : 768px) {
+	body.body-padding {
+	   padding-top: 78px;
+	}
+	.page-body {
+		padding: 2rem;
+		h2 {
+    	font-size: 1.65rem;
+  	}
+	}
+	#victory-resources-navigation #victory-resources-navbar-links .nav li a {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+	}
+	.splash-header {
+		padding: 3rem 0;
+		h1 {
+			font-size: 2rem;
+	    line-height: 1.2;
+		}
+	}
+	.splash-image h1 {
+		font-size: 2.25rem;
+    line-height: 1.2;
+	}
+	
+	.splash-image .container, .splash-header .container {
+		width: calc(100% - 2rem);
+	}
+
+	#victory-resources-navigation {
+		.container {
+			padding: 0 1.5rem;
+			.victory-logo img {
+				width: 78px;
+			}
+		}
+	}
+
+	#victory-resources-navigation.transparent  {
+		.container {
+			padding: 0 1.5rem;
+			.victory-logo img {
+				width: 120px;
+			}
+		}
+	}
+
+	hr {
+		width: 48px;
+	}
+
+	.black-box, .white-box {
+		padding: 3rem;
+		.block-quote {
+	    font-size: 1.25rem ;
+	    font-weight: 400;
+	    border-left: 0.5rem solid #f19224;
+	    p {
+				padding-left: 1rem;	
+				margin-bottom: 1.5rem;		    	
+	    }
+	    ul {
+	    	padding-left: 1rem;
+	    }
+		}
+	}
+	#projects {
+		.project-container {
+			.project-content-container {
+				width: calc(100% - 3rem);
+				h2 {
+					font-size: 1.65rem;
+				}
+			}
+		}
+	}
+	.minerals {
+		.minerals-container {
+			padding: 2rem;
+			font-size: 1.125rem;
+			h2 {
+				font-size: 1.65rem;
+			}
+			.victory-icon {
+				width: 48px;
+			}
+		}
+	}
+	.newsletter {
+		.input-search {
+			width: calc(100% - 4rem);
+			margin-bottom: 0.5rem;
+		}
+		.btn-search {
+    	width: calc(100% - 4rem);			
+		}
+	}
+	#victory-resources-navigation #victory-resources-navbar-links .nav li a:focus, #victory-resources-navigation #victory-resources-navbar-links .nav li a:hover {
+		border-left: 3px solid #f19224;
+    	padding-top: 24px;
+    	border-top: 0;
+	}
+	footer {
+		padding: 1rem 0;
+		.col-xs-12 {
+			text-align: center;
+			img {
+				width: 160px;
+				margin-bottom: 1rem;
+			}
+			ul {
+				padding: 0;
+			}
+			.menu {
+				margin-bottom: 2.5rem;
+			}
+			.menu li, .address li {
+				margin: 1rem;
+			}
+			.menu span, .address span {
+				padding: 0;
+			}
+		}
+	}
+
+
+}
+
+
+@media only screen and (max-width : 480px) {
+
+}
+
+
+@media only screen and (max-width : 320px) {
+
+}
+
+.hamburger-inner, .hamburger-inner:before, .hamburger-inner:after {
+		background: #333;
+    height: 2px;
+    border-radius: 0px;
+}
+
+.transparent .hamburger-inner, .transparent .hamburger-inner:before, .transparent .hamburger-inner:after {
+    background-color: white;
+}
+
+.navbar-toggle {
+    position: absolute;
+    float: none;
+    right: 1.5rem;
+    top: 1.75rem;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 0;
+}
+
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+    max-height: none;
+}
+
+

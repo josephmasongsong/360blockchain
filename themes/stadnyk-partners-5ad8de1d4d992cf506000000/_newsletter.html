@@ -1,0 +1,11 @@
+
+{% form_for signup %}   
+{% hidden_field_tag "page_id", page.id %} 
+<div class="form-errors">{% error_messages_for signup %}</div>
+<!-- <input required="" class="input-search" id="signup_email" name="signup[email]" placeholder="Enter your email..." type="email" aria-invalid="true" onkeyup="checkInput(this.value)"> -->
+{% email_field "email", class:"input-signup form-control", placeholder:"Email your email...", required: "required" %} 
+<!-- <button class='btn-search' type='submit'>SUBSCRIBE</button> -->
+ {% submit_tag "SUBSCRIBE", class:"btn-signup btn btn-primary" %}
+
+{% endform_for %}
+

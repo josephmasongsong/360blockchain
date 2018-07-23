@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 footer-image">
+      <a href="/">
+        <img src="{{ site.meta_image_url }}">                 
+      </a>
+
+    </div>
+    <div class="col-sm-2 footer-nav">
+
+      <ul class="nav">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        {% for child in site.root_nav_pages %}       
+            <li {% if child.is_or_is_ancestor_of_current_page? %}class="active"{% endif %}>
+              <a href="{{ child.url }}">{{ child.name }}</a>
+            </li>
+        {% endfor %}
+        <li>
+          <a href="/legal_disclaimer">Legal Disclaimer</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-3 col-sm-offset-1 footer-text">
+      {{ site.footer_content }}
+      <a href="https://www.facebook.com/weekendunlimited/" target="_blank" class="social-media-link">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle-thin fa-stack-2x"></i>
+          <i class="fa fa-facebook fa-stack-1x"></i>
+        </span>
+      </a>
+      <a href="https://twitter.com/weekndunlimited" target="_blank" class="social-media-link">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle-thin fa-stack-2x"></i>
+          <i class="fa fa-twitter fa-stack-1x"></i>
+        </span>
+      </a>
+      <a href="https://www.instagram.com/weekendunlimited" target="_blank" class="social-media-link">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle-thin fa-stack-2x"></i>
+          <i class="fa fa-instagram fa-stack-1x"></i>
+        </span>   
+      </a>
+
+      
+      <div class="legal-text">
+        <p>Weekend Unlimited. Copyright © 2018.<br>All rights reserved //</p>
+      </div>
+    </div>
+  </div>
+</div>  
+

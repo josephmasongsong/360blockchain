@@ -1,0 +1,25 @@
+<section class="hp-content" id="top" style="background: url('{% for feature in page.features limit: 1 %}{{ feature.image_url }}{% endfor %}') no-repeat center center; background-size: cover;">
+  <div class="content-container ">
+    <img src="https://d3n8a8pro7vhmx.cloudfront.net/360blockchain/pages/13/attachments/original/1507764587/360Logo_Exploration-FINAL_notag_white.png?1507764587" class="center-logo animated fadeInUp">
+    {% if page.headline.size > 0 %}
+    <h1 class="headline wow fadeInUp">{{ page.headline }}</h2>
+    {% endif %}
+    <div class="content">
+      {{ page.basic.content }}
+    </div>      
+  </div>
+</section>
+
+{% subpage "about_us" with "hpsub_first" %}
+
+{% subpage "how_we_invest" with "hpsub_second" %}
+
+{% subpage "our_categories" with "hpsub_cat" %}
+
+{% subpage "newsletter" with "newsletter" %}
+
+
+
+
+
+

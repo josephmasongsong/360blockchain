@@ -1,0 +1,27 @@
+<div class="basic-page-header" style="width: 380px;">
+  <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5a9778fb5ee54dbc96000000/attachments/original/1521494719/blobs-01.png?1521494719" alt="">
+  <h1>News</h1>
+</div>
+
+
+<section class="bg-white blog-post">
+    <div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+			
+				<h1 class="news-title">{{ page.headline }}</h1>
+				<span class='date'>{{ page.published_at | date: '%B %d, %Y %l:%M %p' }}</span>
+				<div class="responsive-object">
+					{{ page.blog_post.content }}
+				</div>
+				{{ page.blog_post.content_flip }}
+				<div class="like-page">
+					{% include "like_page" %}				
+				</div>
+
+			</div>
+		</div>
+    </div>  
+
+ </section>
+  {% subpage "newsletter" with "newsletter" %}

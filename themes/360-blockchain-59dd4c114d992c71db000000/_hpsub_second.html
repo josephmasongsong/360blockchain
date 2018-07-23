@@ -1,0 +1,21 @@
+<section class="hpsub-content" id="how_we_invest">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="hpsub-bg col-sm-6" style="background: url('{% for feature in page.features limit: 1 %}{{ feature.image_url }}{% endfor %}') no-repeat center center; background-size: cover;">
+      	
+      </div>
+      <div class="col-sm-5 ml">
+      	<div class="content-container wow fadeIn">
+	        <h2 class="headline">
+	          {{ page.headline }}
+	        </h2>
+	        <div class="content">
+
+	          {{ page.basic.content }}
+	        
+          </div>          		
+      	</div>  	
+      </div>
+    </div>
+  </div>
+</section>

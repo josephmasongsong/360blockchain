@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1.0"><!-- So that mobile webkit will display zoomed in -->
+    <meta name="format-detection" content="telephone=no"><!-- disable auto telephone linking in iOS -->
+    <title>NationBuilder</title>
+<style type="text/css">
+  /* Resets: see reset.css for details */
+  body {
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    color: #333333;
+    background-color: #ffffff;
+    font-family:Helvetica Neue,Helvetica,Arial,Calibri,sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  li { margin-bottom: 20px; }
+  table { border-spacing: 0; border-collapse: collapse; border-spacing: 0; }
+  table td { border-collapse: collapse;}
+  p { margin-bottom: 1em; }
+  .body-content img { max-width: 100%; }
+  .logo { width: 100%; height: auto; }
+  .body-content a { color:#00CE7C; }
+  @media screen and (max-width:600px) {
+    table[class="container"] {
+      width: 100%!important;
+    }
+  }
+  @media screen and (max-width:480px) {
+    div[class="body-content"] img {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body style="margin:0; padding:0;" bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<!-- 100% wrapper -->
+<table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+  <tr>
+    <td align="center" valign="top" bgcolor="#ffffff" style="background-color:#ffffff;">
+
+   <!-- ### 600PX CONTAINER ### -->
+       <table width="600" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="background-color:#ffffff;margin-top:30px;" class="container">
+       <tr>
+        <td style="text-align:left; font-family:Helvetica Neue,Helvetica,Arial,Calibri,sans-serif;padding-left:15px;padding-right:15px;">
+
+        <div style="width: 220px; margin: 0 auto 40px;">
+          <a href="https://www.weekendunlimited.com/">
+            <img style="width:100%; height:auto;" src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5ad950fb9d066131c2000006/attachments/original/1524191802/WeekendIncTM_black_.jpg?1524191802" alt="Weekend Unlimited Inc" border="0" />
+          </a>
+        </div>
+        </td>
+       </tr>
+        <tr>
+          <td style="font-size:16px;font-family:Helvetica Neue,Helvetica,Arial,Calibri,sans-serif;line-height:1.5em;padding-left:15px;padding-right:15px;padding-top:30px;text-align:left;" class="body-content">{{ body }}</td>
+        </tr> 
+         
+         <tr>
+           <td style="font-family:Helvetica Neue,Helvetica,Arial,Calibri,sans-serif;padding-left:15px;padding-right:15px;padding-top:30px;">
+             
+            <p style="font-size: 14px; color: #333; line-height: 1.5;"> <b>Forward Looking Statements</b> -
+
+						Certain information set forth in this material may contain forward-looking statements that involve substantial known and unknown risks and uncertainties. All statements other than statements of historical fact are forward-looking statements, including, without limitation, statements regarding future financial position, business strategy, use of proceeds, corporate vision, proposed acquisitions, partnerships, joint-ventures and strategic alliances and co-operations, budgets, cost and plans and objectives of or involving the Company. Such forward-looking information reflects management's current beliefs and is based on information currently available to management. Often, but not always, forward-looking statements can be identified by the use of words such as "plans", "expects", "is expected", "budget", "scheduled", "estimates", "forecasts", "predicts", "intends", "targets", "aims", "anticipates" or "believes" or variations (including negative variations) of such words and phrases or may be identified by statements to the effect that certain actions "may", "could", "should", "would", "might" or "will" be taken, occur or be achieved.  A number of known and unknown risks, uncertainties and other factors may cause the actual results or performance to materially differ from any future results or performance expressed or implied by the forward-looking information. These forward-looking statements are subject to numerous risks and uncertainties, certain of which are beyond the control of the Company including, but not limited to, the impact of general economic conditions, industry conditions and dependence upon regulatory approvals. Readers are cautioned that the assumptions used in the preparation of such information, although considered reasonable at the time of preparation, may prove to be imprecise and, as such, undue reliance should not be placed on forward-looking statements. The Company does not assume any obligation to update or revise its forward-looking statements, whether as a result of new information, future events, or otherwise, except as required by securities laws.
+             </p>
+             
+           </td>
+         </tr>
+         
+          <tr>
+            <td style="font-family:Helvetica Neue,Helvetica,Arial,Calibri,sans-serif;padding-left:15px;padding-right:15px;padding-top:30px;">
+              <p style="color:#333333;font-size:12px;line-height:1.5;">
+            Weekend Unlimited Inc. {% if settings.has_address? %} &middot; {{ settings.address.one_line }} {% endif %} 
+                <br/>This email was sent to <a style="color:#00CE7C;" href="{{ recipient.email }}">{{ recipient.email }}</a>.  To stop receiving emails, <a style="color:#00CE7C;" href="{{ settings.site.unsubscribe_url }}">click here</a>.
+                {% if broadcaster.has_twitter? or broadcaster.has_facebook? %}
+                <br/>You can also keep up with {{ broadcaster.name }}
+                {% if broadcaster.has_twitter? and broadcaster.has_facebook_page? %}
+                on <a style="color:#00CE7C;" href="{{ broadcaster.twitter_profile_url }}">Twitter</a> or <a style="color:#1488b9;" href="{{ broadcaster.facebook_page_profile_url }}">Facebook</a>.
+                {% elsif broadcaster.has_twitter? %}
+                on <a style="color:#00CE7C;" href="{{ broadcaster.twitter_profile_url }}">Twitter</a>.
+                {% elsif broadcaster.has_facebook_page? %}
+                on <a style="color:#00CE7C;" href="{{ broadcaster.facebook_page_profile_url }}">Facebook</a>.
+                {% endif %}
+                {% endif %}
+        </p>
+            </td>
+          </tr>
+       </table>
+   <!-- ### 600PX CONTAINER ###  -->
+    </td>
+  </tr>
+</table>
+<!--/100% wrapper-->
+</body>
+</html>

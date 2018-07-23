@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page_title }}</title>
+
+    <!-- Bootstrap -->
+    <link href="theme.scss" rel="stylesheet">
+    <link href="ionicons.css" rel="stylesheet">
+    <link href= "hamburgers.css" rel="stylesheet">
+    <link href="stadnykandpartners.scss" rel="stylesheet">
+    <link href="mobile.scss" rel="stylesheet">
+
+    {{ content_for_header }}
+
+    <script type="text/javascript">
+      NB.appConfig.userIsLoggedIn = {{request.logged_in?}};
+    </script>
+  </head>
+  <body class="{{ page.page_class_name }} page-{{ request.template | replace: '_', '-' }} js">
+    <div id="wrapper">
+      {% unless page.slug == 'landing_page' %}
+      {% include "nav" %}
+      {% endunless %}
+      {{ content_for_notifications }}
+
+
+      {% if request.is_sidebar? %}
+      {% include "columns_2" %}
+      {% else %}
+      {% include "columns_1" %}
+      {% endif %}
+      
+    </div>
+
+
+
+    {% unless page.slug == 'landing_page' %}
+    <footer class="container-fluid">
+        {{ content_for_footer }}
+        {% include 'footer' %}
+    </footer>
+    {% endunless %}
+
+
+    <script src="bootstrap.js"></script>
+    <script src="stadnyk.js"></script>
+
+  </body>
+</html>
+

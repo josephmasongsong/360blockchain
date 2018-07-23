@@ -1,0 +1,59 @@
+<section class="people-section container-fluid" id="people">
+    <div class="row no-gutter">
+        <div class="col-sm-12">
+            <h2>{{ page.headline }}</h2>
+        </div>
+    </div>
+    <div class="row no-gutter">
+    	{% for child in page.children %}
+        <div class="col-sm-4">
+            {% if child.features.size > 0 %}
+            <div class="person" style="background-image: url({% for feature in child.features limit: 1 %}{{ feature.image_url }}{% endfor %});">
+                <div class="overlay">
+                    <span>
+                    <a data-target="#modal-{{ child.id }}" data-toggle="modal" href="#">
+                    {{ child.headline }}
+                    <br>{{ child.excerpt }}<br>
+                    </a>
+                    </span>
+                </div>
+            </div>
+
+            {% else %}
+            <div class="person" style="background-image: url('https://d3n8a8pro7vhmx.cloudfront.net/themes/5ad8de1d4d992cf506000000/attachments/original/1524522139/person-placeholder.png?1524522139');">
+                <div class="overlay">
+                    <span>
+                    <a data-target="#modal-{{ child.id }}" data-toggle="modal" href="#">
+                    {{ child.headline }}
+                    <br>{{ child.excerpt }}<br>
+                    </a>
+                    </span>
+                </div>
+            </div>
+
+            {% endif %}
+        </div>
+        {% endfor %}
+        <div class="col-sm-4">
+            <div class="black-box">
+                <div class="black-box-content">
+                    <a href="/our_story">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% for child in page.children %}
+<div class='modal' id="modal-{{ child.id }}" role='dialog' tabindex='-1'>
+    <div class='modal-dialog modal-lg' role='document'>
+        <div class='modal-content'>
+            <i class='ion ion-ios-close-empty' data-dismiss='modal' style="cursor: pointer;"></i>
+            <img class='person-photo' src='{% if child.features.size > 0 %}{% for feature in child.features limit: 1 %}{{ feature.image_url }}{% endfor %}{% else %}https://d3n8a8pro7vhmx.cloudfront.net/themes/5ad8de1d4d992cf506000000/attachments/original/1524522139/person-placeholder.png?1524522139{% endif %}'>
+            <span class='name'>{{ child.headline }}</span>
+            <span class='title'>{{ child.excerpt }}</span>
+            {{ child.basic.content }}
+        </div>
+    </div>
+</div>
+{% endfor %}

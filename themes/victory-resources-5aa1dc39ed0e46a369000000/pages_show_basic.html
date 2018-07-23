@@ -1,0 +1,11 @@
+<section class='splash-header' style='{% if page.features.size > 0 %}{% for feature in page.features limit: 1 %}background-image: url({{ feature.image_url }}); background-size: cover;{% endfor %}{% endif %};'>
+  <div class='overlay'></div>
+
+  <h1 class="text-center">
+    {{ page.headline }}
+  </h1>
+
+</section>
+<section class="page-body">
+	
+</section>
