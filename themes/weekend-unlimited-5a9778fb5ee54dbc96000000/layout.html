@@ -4,16 +4,21 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://use.fontawesome.com/e404551e3e.js"></script>
 
     <title>{{ page_title }}</title>
+
+    <script src="https://use.fontawesome.com/e404551e3e.js"></script>
 
     <!-- Bootstrap -->
     <link href="theme.scss" rel="stylesheet">
     <link href="jquery.fullpage.css" rel="stylesheet">
     <link href="font_brandon.css" rel="stylesheet">
     <link href="weekendunlimited.scss" rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/flexslider.min.css" rel="stylesheet">
+    <link href="popup-slider.css" rel="stylesheet">
+    {% if page.is_homepage? == true %}
+    <link href="modal-video.min.css" rel="stylesheet">
+    {% endif %}
     {{ content_for_header }}
 
     <script type="text/javascript">
@@ -44,12 +49,10 @@
 
     
 
-    <footer>
+      <footer>
         {{ content_for_footer }}
         {% include 'footer_content' %}
-    </footer>
-
-
+      </footer>
       
     </div>
 
@@ -58,11 +61,17 @@
     <script src="jquery.fullpage.js"></script>
     <script src="scrolloverflow.js"></script>
     <script src="fullpage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider-min.js"></script>    
+    <script src="popup-slider.js"></script>
 
     {% if page.slug == 'landing_page' %}
+    <script src="jquery-modal-video.min.js"></script>
     <script src="site.js"></script>
     {% endif %}
-    
+
+    {% if page.slug == "stock_quote" %}
+    <script type="text/javascript" src="stock.quote.js"></script>
+    {% endif %}
 
   </body>
 </html>

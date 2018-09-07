@@ -6,15 +6,47 @@
     {% endif %}
     <div class="content">
       {{ page.basic.content }}
-    </div>      
+    </div> 
+
   </div>
 </section>
+{% for child in page.children limit: 1%}
+{% if child.slug == 'our_mission' %}
+<section class="hpsub-content zero" id="about_us">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="hpsub-bg col-sm-6" style="background: url('{% for feature in child.features limit: 1 %}{{ feature.image_url }}{% endfor %}') no-repeat center center; background-size: cover;">
+        
+      </div>
+      <div class="col-md-5 ml col-sm-6">
+        <div class="content-container wow fadeIn">
+          <h2 class="headline">
+            {{ child.name }}
+          </h2>
+          <div class="content">
+            {{ child.excerpt }}
+          </div>
+          <h3 class="headline">{{ child.headline }}</h3>    
+          <div class="content">
+          {{ child.basic.content }}
+          </div>          
+        </div>  
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endif %}
+{% endfor %}
 
 {% subpage "about_us" with "hpsub_first" %}
 
 {% subpage "how_we_invest" with "hpsub_second" %}
 
 {% subpage "our_categories" with "hpsub_cat" %}
+
+{% subpage "our_portfolio" with "hpsub_port" %}
 
 {% subpage "newsletter" with "newsletter" %}
 

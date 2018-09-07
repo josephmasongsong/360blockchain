@@ -1,0 +1,47 @@
+<div class="basic-page-header">
+  <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5a9778fb5ee54dbc96000000/attachments/original/1521494719/blobs-01.png?1521494719" alt="">
+  <h2>{{ page.headline }}</h2>
+</div>    
+
+<section class="bg-white basic-page-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 sq-content mb">
+        <h2 class="headline">
+          Canadian Securities Exchange
+          <!-- <small>Real time, 15 minute delayed stock quote</small> -->
+        </h2>
+        <p class="symbol"><strong>YOLO</strong></p>
+
+        <ul class="list-group">
+          <li class="list-group-item">Open:<span id="1_open"></span></li>
+          <li class="list-group-item">High:<span id="2_high"></span></li>
+          <li class="list-group-item">Low:<span id="3_low"></span></li>
+          <li class="list-group-item">Close:<span id="4_close"></span></li>
+          <li class="list-group-item">Volume:<span id="5_volume"></span></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-6 sq-content mb">
+        <h2 class="headline">
+          Frankfurt Stock Exchange
+          <!-- <small>Real time, 15 minute delayed stock quote</small> -->
+        </h2>
+        <p class="symbol"><strong>YOLO</strong></p>
+
+        <ul class="list-group">
+          <li class="list-group-item">Open:<span id="1-open"></span></li>
+          <li class="list-group-item">High:<span id="2-high"></span></li>
+          <li class="list-group-item">Low:<span id="3-low"></span></li>
+          <li class="list-group-item">Close:<span id="4-close"></span></li>
+          <li class="list-group-item">Volume:<span id="5-volume"></span></li>
+        </ul>
+      </div>
+      <div class="col-sm-12 sq-content hr">
+        <p class="symbol">The most recent data point is the cumulative prices and volume information of the current trading day, updated realtime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% subpage "newsletter" with "newsletter" %}

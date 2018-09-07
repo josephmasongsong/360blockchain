@@ -1,139 +1,32 @@
 <div id="fullpage">
   <section class="section" style="background: url('{% for feature in page.features limit: 1 %}{{ feature.image_url }}{% endfor %}'); background-size: cover; background-position: center;" id="section1">
+    <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5a9778fb5ee54dbc96000000/attachments/original/1534375919/tagline-edit.png?1534375919" alt="" class="tagline">
+    {% for child in page.children %}
+    {% if child.slug == 'video_toggle' %}
+    <button class="js-modal-btn float" data-video-id={{ child.excerpt }} >Watch Our Video <i class="fa fa-play-circle" aria-hidden="true"></i></button>
+    {% endif %}
+    {% endfor %}
   </section>
 
+  
+  {% subpage "our_positioning" with "our_positioning" %}
+
+  {% subpage "our_approach" with "our_approach" %}
+
+  {% subpage "our_facilities" with "our_facilities" %}
+
   {% for child in page.children %}
+  {% if child.slug == 'brand_popup' %}
+  {% subpage "brand_popup" with "brand_popup" %}
+  {% endif %}
+  {% endfor %}
 
-    {% if child.slug == 'our_positioning' %}
-      <section class="section fp-auto-height bg-white" id="ourPositioning">
-        <div class="container">
-          <h1>{{ child.headline }}</h1>
-          {{ child.basic.content }}      
-        </div>  
-      </section>
-      {% if child.features_count > 0 %}
-      {% if child.features.size > 0 %}
-        <section class="section text-center">
-          {% for feature in child.features %}
-          <div class="slide"  style="background: url({{ feature.image_url }}); background-size: cover; background-position: center;">
-          </div>
-          {% endfor %}
-        </section>
-      {% endif %}
-      {% endif %}
-    {% endif %}
+  {% subpage "our_technologies" with "our_technologies" %}
 
-    {% if child.slug == 'our_approach' %}
-      <section class="section fp-auto-height bg-green" id="ourApproach">
-        <div class="container">
-          <h1>{{ child.headline }}</h1>
-          {{ child.basic.content }}     
-        </div>  
-      </section>
-    {% endif %}
-
-    {% if child.slug == 'our_facilities' %}
-      <section class="section fp-auto-height hidden-xs" id="ourFacilities">
-        {% for descendant in child.children %}
-        <div class="slide">
-          <div class="row row-eq-height" style="padding: 0; height: 100%; margin-left: 0; margin-right: 0;">
-            <div class="col-sm-6 facility-image" style="{% if descendant.features.size > 0 %}{% for feature in descendant.features limit: 1 %}background-image: url({{ feature.image_url }});{% endfor %}{% endif %} background-size: cover; background-position: center; padding: 0;">
-              <div class="overlay"></div>
-              <h2 class="facilities-header">Our<br>Facilities</h2>
-              <div class="blob-container">
-                <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5a9778fb5ee54dbc96000000/attachments/original/1521494719/blobs-03.png?1521494719" alt="">
-                <h2 class='blob-centered'>{{ descendant.headline }}</h2>
-              </div>
-            </div>
-            <div class="col-sm-6 bg-dark" style="padding-left: 3.5rem; padding-right: 3.5rem;">
-              <div class="property-highlights bg-dark">
-                {{ descendant.basic.content }}     
-              </div>
-              {% for grandchild in descendant.children limit: 1 %}
-              <div class="more-property-highlights" style="padding: 0 3.5rem;">
-                {{ grandchild.basic.content }}
-              </div>
-              {% endfor %}
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </section>
-
-      
-
-      <section class="section fp-auto-height hidden-sm hidden-md hidden-lg" id="ourFacilities">
-        {% for descendant in child.children %}
-        <div class="slide">
-          <div class="row" style="padding: 0;  margin-left: 0; margin-right: 0;">
-            <div class="facility-image" style="{% if descendant.features.size > 0 %}{% for feature in descendant.features limit: 1 %}background-image: url({{ feature.image_url }});{% endfor %}{% endif %} background-size: cover; background-position: center; padding: 0;">
-              <div class="overlay"></div>
-              <h2 class="facilities-header">Our<br>Facilities</h2>
-              <div class="blob-container">
-                <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5a9778fb5ee54dbc96000000/attachments/original/1521494719/blobs-03.png?1521494719" alt="">
-                <h2 class='blob-centered'>{{ descendant.headline }}</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </section>
-
-      {% if child.features_count > 0 %}
-      {% if child.features.size > 0 %}
-        <section class="section text-center">
-          {% for feature in child.features %}
-          <div class="slide" id="slide1"  style="background: url({{ feature.image_url }}); background-size: cover; background-position: center;">
-          </div>
-          {% endfor %}
-        </section>
-      {% endif %}
-      {% endif %}
-    {% endif %}
-    
-    {% if child.slug == 'our_brands' %}
-    <section class="section fp-auto-height bg-white" id="ourBrands">
-      <div class="container">
-        <h1>{{ child.headline }}</h1>
-        {{ child.basic.content }}     
-
-        {% if child.features_count > 0 %}
-        {% if child.features.size > 0 %}     
-        <div class="row" style="margin-top: 3.5rem;">
-          {% for feature in child.features %}
-          <div class="col-sm-4">
-            <div class="brand-image" style="background: url({{ feature.image_url }}); background-size: cover; background-position: bottom; height: 250px; width: 100%;">
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-        {% endif %}
-        {% endif %}
-      </div>  
-    </section>
-    {% endif %}
-
-    {% if child.slug == 'our_technologies' %}
-      <section class="section fp-auto-height bg-dark" id="ourTechnologies">
-        <div class="container">
-            <h1>{{ child.headline }}</h1>
-            {{ child.basic.content }}     
-        </div>  
-      </section>
-      {% if child.features_count > 0 %}
-      {% if child.features.size > 0 %}
-        <section class="section text-center">
-          {% for feature in child.features %}
-          <div class="slide"  style="background: url({{ feature.image_url }}); background-size: cover; background-position: center;">
-          </div>
-          {% endfor %}
-        </section>
-      {% endif %}
-      {% endif %}
-
-
-    {% endif %}
-
+  {% for child in page.children %}
+  {% if child.slug == 'shop_announcement' %}
+  {% subpage "shop_announcement" with "shop_announcement" %}
+  {% endif %}
   {% endfor %}
 
   {% subpage "newsletter" with "newsletter" %}

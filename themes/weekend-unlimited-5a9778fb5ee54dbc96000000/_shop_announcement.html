@@ -1,0 +1,42 @@
+
+
+<section class="newsletter bg-white" id="getNotified">
+	<div class="basic-page-header" style="top: -6rem;">
+	  <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5a9778fb5ee54dbc96000000/attachments/original/1521494719/blobs-01.png?1521494719" alt="" style="z-index:0;">
+	  <h1 style="top: 55%;">Reserve Yours Now</h1>
+	</div>    
+
+  <div class="container">
+    <div class="row row-eq-height">
+
+      <div class="col-sm-6 col-xs-12">
+        <div class="get-notified-container">
+          <h1>{{ page.headline }}</h1>
+          <p>{{ page.signup.content }}</p>
+         {% form_for signup %}   
+            <div class="col-sm-8">
+              {% hidden_field_tag "page_id", page.id %} 
+              <div class="form-errors">{% error_messages_for signup %}</div>
+              <input required="" class="text user-error form-control" id="signup_email" name="signup[email]" placeholder="Enter your email..." type="email" aria-invalid="true" onkeyup="checkInput(this.value)" style="border: 1px solid #ccc !important;">
+            </div>
+            <div class="col-sm-4">
+              <button type="submit" class="btn btn-primary btn-block" name="commit" value="Join">
+                <i class="fa fa-envelope"></i>
+                Subscribe
+              </button>
+              <div class="form-submit"></div>
+            </div>
+          {% endform_for %}
+
+
+        </div>
+      </div>
+
+      <div class="col-sm-5 col-sm-offset-1 col-xs-12">
+        <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5a9778fb5ee54dbc96000000/attachments/original/1534902238/mmvat.jpeg?1534902238" alt="" class="img-responsive" style="width:100%;">
+      </div>
+
+    </div>    
+  </div>
+</section>
+

@@ -1,0 +1,33 @@
+<section class="section fp-auto-height bg-white" id="ourBrands">
+  <div class="container">
+    <h1 class="text-center">{{ page.headline }}</h1>
+    {% comment %}{{ page.basic.content }} {% endcomment %}  
+    
+
+    <div class="row" style="margin-top: 3.5rem;">
+    {% for child in page.children %}
+      <div class="col-sm-3">
+        {% assign first = child.features | first %}
+        {% assign second = child.features[1] %}
+        <a href="{{ second.image_url }}" data-strip-group="group-{{ child.id }}" class="strip"  data-strip-caption="{{ second.headline }}">
+
+        <div class="overlay">
+          <span>  
+
+            Learn More
+
+          </span>
+        </div>
+
+        <img src="img-responsive" src="{{ first.image_url }}" style="width: 100%;">    
+        </a>
+        {% for feature in child.features %}
+          {% unless feature == first or feature == second %}
+          <a href="{{ feature.image_url }}" class="strip" data-strip-group="group-{{ child.id }}"  data-strip-caption="{{ feature.headline }}"></a>
+          {% endunless %}
+        {% endfor %}
+      </div>
+    {% endfor %}
+    </div>
+  </div>  
+</section>

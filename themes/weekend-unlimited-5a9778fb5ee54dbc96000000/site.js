@@ -1,10 +1,11 @@
 
-
 $(document).ready(function () {
+
+    $(".js-modal-btn").modalVideo({channel:'vimeo'});
 
       setTimeout(function() {
         $('.alert').slideUp();
-      }, 4000);
+      }, 8000);
 
     $(document).on("scroll", onScroll);
   
@@ -59,5 +60,4 @@ function onScroll(event){
         }
     });
 }
-
 

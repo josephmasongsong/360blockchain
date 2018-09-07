@@ -1,0 +1,16 @@
+<section class="section fp-auto-height bg-white" id="ourPositioning">
+<div class="container">
+  <h1>{{ page.headline }}</h1>
+  {{ page.basic.content }}      
+</div>  
+</section>
+{% if page.features_count > 0 %}
+{% if page.features.size > 0 %}
+<section class="section text-center">
+  {% for feature in page.features %}
+  <div class="slide"  style="background: url({{ feature.image_url }}); background-size: cover; background-position: center;">
+  </div>
+  {% endfor %}
+</section>
+{% endif %}
+{% endif %}

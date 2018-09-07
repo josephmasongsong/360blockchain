@@ -17,7 +17,7 @@
           <ul class="nav navbar-nav navbar-right">
             {% for child in site.root_nav_pages %}
             {% if child.leaf? or child.nav_children.size == 0 %}
-              {% if child.slug == 'about_us' or child.slug == 'how_we_invest' or child.slug == 'our_categories' %}
+              {% if child.slug == 'about_us' or child.slug == 'how_we_invest' or child.slug == 'our_categories' or child.slug == 'our_portfolio' %}
                 <li>
                   <a href="{% if page.is_homepage? %}#{{ child.slug }}{% else %}/#{{ child.slug }}{% endif %}" class="scrolltarget">{{ child.name }}</a>
                 </li>

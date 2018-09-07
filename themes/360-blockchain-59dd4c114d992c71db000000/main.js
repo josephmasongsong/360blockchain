@@ -7,6 +7,12 @@ $(function(){
      navMain.on("click", "a:not([data-toggle])", null, function () {
          navMain.collapse('hide');
      });
+
+    $(".modal").on("show", function () {
+      $("body").addClass("modal-open");
+    }).on("hidden", function () {
+      $("body").removeClass("modal-open")
+    });
 });
 
 $(document).ready(function () {

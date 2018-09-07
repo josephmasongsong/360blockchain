@@ -8,6 +8,7 @@
     <script src="https://use.fontawesome.com/384ca49d13.js"></script>
     <link href="theme.scss" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="ionicons.css" rel="stylesheet">
     <link rel="stylesheet" href="animate.css">
     <link href="custom.scss" rel="stylesheet">
     {{ content_for_header }}
@@ -33,7 +34,7 @@
 
               <ul class="nav">
                 {% for child in site.root_nav_pages %}
-                  {% if child.slug == 'about_us' or child.slug == 'how_we_invest' or child.slug == 'our_categories' %}
+                  {% if child.slug == 'about_us' or child.slug == 'how_we_invest' or child.slug == 'our_categories' or child.slug == 'our_portfolio' %}
                     <li>
                       <a href="{% if page.is_homepage? %}#{{ child.slug }}{% else %}/#{{ child.slug }}{% endif %}" class="scrolltarget">{{ child.name }}</a>
                     </li>

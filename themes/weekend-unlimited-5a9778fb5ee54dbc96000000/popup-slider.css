@@ -1,0 +1,172 @@
+
+
+/* Popup CSS Below */
+.flexslider .slides img {
+  margin: 0 auto 20px;
+  /*max-width: 100px;*/
+}
+.ct-sliderPop {
+  width: 100% !important;
+  height: 100vh !important;
+  overflow:auto;
+  padding-bottom: 5rem;
+}
+
+.ct-sliderPop .inner {
+  color: #fff;
+ padding-top: 5rem;
+}
+.map-white-border {
+  border-bottom: 1px solid #fff;
+  width: 30%;
+  margin: 50px auto;
+}
+.ct-sliderPop-container {
+  display: none;
+  left: 0px;
+  opacity: 0;
+  top: 0px;
+  z-index: 9998;
+}
+.ct-sliderPop-container.open {
+  animation-duration: 0.35s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+  display: block;
+}
+.ct-sliderPop-container {
+  overflow:auto;
+  display: inline-table;
+  max-width: 100%;
+  width: 100%;
+  position: fixed !important; /* Required to override style inline style added by Flexslider */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9997;
+}
+.ct-sliderPop-container  ul li {
+  margin-bottom: 20px;
+}
+.ct-sliderPop-slide1 {
+  background: #222 none repeat scroll 0% 0%;
+}
+
+.ct-sliderPop .inner .ct-sliderPop-close {
+  display: inline-block;
+  margin: -1% auto 30px;
+  transition: opacity 0.25s ease-in-out 0s;
+  width: 75px;
+}
+
+.ct-newsletter-close.ct-sliderPop-close img {  
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+}
+.ct-sliderPop img {
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.ct-sliderPop h1 {
+  /*font-family: "nimbus-sans-condensed", sans-serif;*/
+  /*font-size: 75px;*/
+/*  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-top: 0;*/
+}
+.ct-sliderPop h1 span {
+  /*font-family: 'coquette', fantasy;*/
+  text-transform: capitalize;
+  line-height: 0.8;
+}
+.ct-sliderPop h2 {
+margin: 40px 0 40px;
+}
+.ct-sliderPop .fa {
+    margin-bottom: 10px;
+}
+
+.ct-sliderPop-container .flex-direction-nav a {
+  overflow: visible;
+}
+.flex-direction-nav a,
+.flex-direction-nav a.flex-next::before,
+.flex-direction-nav a.flex-prev::before {
+  color: #fff !important;
+}
+.flexslider .slides img.close {
+  width: 40px !important;
+}
+.sliderPop-close {
+  width: 60px;
+}
+
+
+/* =================================
+  # Media Queries 
+================================= */
+
+@media (min-width: 1200px) {
+  .container.caption {
+      width: 960px;
+  }  
+}
+
+@media (min-width: 992px) {
+  .container.caption {
+      width: 960px;
+  }  
+}
+
+
+@media (max-width: 767px){
+
+  .ct-sliderPop > .inner > .cow-map-img {
+    margin-top: 50px;
+  }
+
+  .ct-sliderPop h2 {
+    line-height: 0.2;
+  }
+  .ct-sliderPop-description {
+    padding-bottom: 0;
+  }
+  .ct-sliderPop .inner {
+    margin-top: 10px;
+  }
+}
+
+.flex-direction-nav a.flex-prev {
+    display: block;
+    background: url('../images/rsz_leaf-left.png');
+    width: 50px;
+    height: 50px;  
+}
+
+.flex-direction-nav a.flex-next {
+    display: block;
+    background: url('../images/rsz_leaf-right.png');
+    width: 50px;
+    height: 50px;
+}
+
+.flex-direction-nav a.flex-next:before, .flex-direction-nav a:before, .flex-direction-nav a:before, .icon-right-open:before, .flex-next:before{
+  content: none;
+}
+
+.container.caption {
+  font-size: 1.25rem;
+}
+.container.caption p {
+  margin-bottom: 20px;
+}
+.container.caption h2 {
+  font-weight: bold;
+}
+
+@-webkit-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
+@keyframes fadeIn{0%{opacity:0}100%{opacity:1}}

@@ -1,6 +1,4 @@
 
-
-
 $brand-colour: #00CE7C;
 
 .row-eq-height {
@@ -44,7 +42,9 @@ h1, h2, h3, h4, h5 {
 @import "footers";
 @import "weekend_pagination";
 
-
+.symbol {
+  color: $brand-colour;
+}
 
 .basic-page-header {
   width: 435px;
@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5 {
     position: relative;
     z-index: 1;    
   }
-  h1 {
+  h1, h2 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -72,6 +72,26 @@ h1, h2, h3, h4, h5 {
     min-height: 600px;
     margin-bottom: 20px;
   }
+  .list-group, .list-group-item {
+      padding-left: 0;
+      padding-right: 0;
+      border-left: 0;
+      border-right: 0;
+      border-radius: 0;
+      font-size: 1.25rem;
+      span {
+          float: right;
+      }
+  }
+  .list-group {
+      margin-bottom: 0;
+  }
+  .list-group .list-group-item:first-child {
+      border-top: 0;
+  }
+  .list-group .list-group-item:last-child {
+      border-bottom: 0;
+  }  
 }
 
 .facility-image {
@@ -199,6 +219,121 @@ h1, h2, h3, h4, h5 {
   height: 0;
   margin: 10px 0 1.5rem;
   overflow: hidden;
+}
+
+.strip {
+    position: relative;
+    display: block;
+}
+.strip .overlay {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 500ms ease-out;
+    -webkit-transition: opacity 500ms ease-out;
+    -moz-transition: opacity 500ms ease-out;
+    -o-transition: opacity 500ms ease-out;
+    background-color: rgba(#000, 0.75); 
+
+    span {
+        display: block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        color: #fff !important;
+    }
+}
+
+.strip:hover .overlay {
+    display: block;
+    opacity: 1;
+}
+
+.tagline {
+    position: absolute;
+    max-width: 500px;
+    width: 100%;
+    left: 50%;
+    bottom: 5rem;
+    transform: translateX(-50%);  
+}
+
+.float{
+    position: absolute;
+    bottom: 5rem;
+    right: 5rem;
+    background-color: transparent;
+    z-index: 10;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.25rem;
+    border: 2px solid #fff;
+}
+
+.get-notified-container {
+  position: relative; top:50%; transform:translateY(-50%);
+  .col-sm-8 {
+    padding-left: 0;
+  }
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+.row.no-pad {
+  margin-right:0;
+  margin-left:0;
+}
+.row.no-pad > [class*='col-'] {
+  padding-right:0;
+  padding-left:0;
+}
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
 }
 
 @import "mobile";

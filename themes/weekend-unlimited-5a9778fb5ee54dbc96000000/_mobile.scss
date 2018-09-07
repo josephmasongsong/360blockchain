@@ -1,4 +1,21 @@
-
+@media (min-width: 768px) {
+.col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width: 320px) {
 
@@ -74,6 +91,35 @@
 	}
 	.facilities-header {
 		position: relative;
+	}
+	.row-eq-height {
+		display: initial !important;
+	}
+	.get-notified-container {
+	    position: relative;
+	    top: 0;
+	    transform: none;
+	}
+	#getNotified .basic-page-header {
+		top: -6rem;
+		width: 341px;
+		h1 {
+			top: 62% !important;
+		}
+	}
+	#getNotified .container {
+		margin-top: 8rem;
+	}
+	.get-notified-container .col-sm-8 {
+		padding-left: 15px !important;
+	}
+	.float {
+	    position: relative;
+	    bottom: initial;
+	    right: initial;
+	    left: 50%;
+	    z-index: 10;
+	    transform: translateX(-50%);
 	}
 }
 

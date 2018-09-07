@@ -1,0 +1,59 @@
+
+
+<section class="hpsub-port" id="our_portfolio" style="background: url('{% for feature in page.features limit: 1 %}{{ feature.image_url }}{% endfor %}') no-repeat center center; background-size: cover;">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="content-container col-md-6 col-md-offset-3">
+        <h2 class="headline">
+          {{ page.headline }}
+        </h2>
+        <div class="content">
+          {{ page.basic.content }}
+        </div>        
+      </div>  
+    </div>
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1">
+        <div class="row">
+          {% for child in page.children limit: 4 %}
+            <div class="col-sm-3 port-item">
+
+                {% for feature in child.features limit: 1 %}
+                <div class="img-container">
+                  <img src="img-responsive" src="{{ feature.image_url }}" style="width: 100%;">    
+
+                  <div class="overlay">
+                    <span>  
+                    <a data-target="#modal-{{ child.id }}" data-toggle="modal" href="#" class="click">
+                      Learn More
+                    </a>
+                    </span>
+                  </div>
+                </div>
+                {% endfor %}  
+    
+            </div>
+            {% endfor %}
+              <div class="col-sm-12 port-item">
+                {{page.excerpt}}
+              </div>        
+        </div>
+
+      </div>        
+    </div>
+  </div>
+</section>
+
+{% for child in page.children %}
+<div class='modal' id="modal-{{ child.id }}" role='dialog' tabindex='-1'>
+    <div class='modal-dialog modal-lg' role='document'>
+        <div class='modal-content'>
+            <i class='ion ion-ios-close-empty' data-dismiss='modal' style="cursor: pointer;"></i>
+            <img class='person-photo' src='{% if child.features.size > 0 %}{% for feature in child.features limit: 1 %}{{ feature.image_url }}{% endfor %}{% else %}https://d3n8a8pro7vhmx.cloudfront.net/themes/5ad8de1d4d992cf506000000/attachments/original/1524522139/person-placeholder.png?1524522139{% endif %}'>
+            <h3 class='name'>{{ child.headline }}</h3>
+            <p class='lead'>{{ child.excerpt }}</p>
+            <div style="margin-left: 220px;">{{ child.basic.content }}</div>
+        </div>
+    </div>
+</div>
+{% endfor %}
