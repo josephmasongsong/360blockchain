@@ -23,6 +23,30 @@ body {
 	background: none;
 }
 
+.page-under-construction {
+  background-color: #222;
+  position: relative;
+  .under-maintenance-message {
+    max-width: 100%;
+    width: 600px;
+    display: block;
+    margin: 80px auto 0;
+    img {
+      width: 400px;
+      display: block;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #00CE7C;
+      font-weight: bold;
+    }
+    p {
+      color: #fff;
+      font-size: 1.25rem;
+    }
+  }
+}
+
 #wrapper {
 	overflow-x: hidden;
 }
@@ -67,7 +91,7 @@ h1, h2, h3, h4, h5 {
   }
 }
 .basic-page-section {
-  padding-top: 18rem;
+  padding-top: 12rem;
   .media-content {
     min-height: 600px;
     margin-bottom: 20px;
@@ -92,6 +116,10 @@ h1, h2, h3, h4, h5 {
   .list-group .list-group-item:last-child {
       border-bottom: 0;
   }  
+}
+
+.sp-content h2 {
+  margin-bottom: 30px;
 }
 
 .facility-image {
@@ -195,6 +223,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .blog-post {
+  margin-top: 200px;
   h1 {
     margin-bottom: .5rem;
   }
@@ -238,12 +267,13 @@ h1, h2, h3, h4, h5 {
     -webkit-transition: opacity 500ms ease-out;
     -moz-transition: opacity 500ms ease-out;
     -o-transition: opacity 500ms ease-out;
-    background-color: rgba(#000, 0.75); 
+    background-color: rgba(#000, 0.65); 
 
     span {
         display: block;
         position: relative;
         top: 50%;
+        font-weight: bold;
         transform: translateY(-50%);
         font-size: 1.5rem;
         letter-spacing: 2px;
@@ -291,6 +321,10 @@ h1, h2, h3, h4, h5 {
   display:         flex;
 }
 
+.no-padding {
+  padding: 0;
+}
+
 .row.no-pad {
   margin-right:0;
   margin-left:0;
@@ -313,6 +347,29 @@ h1, h2, h3, h4, h5 {
 .col-xs-5ths {
     width: 20%;
     float: left;
+}
+
+#aboutUs {
+  .content-container {
+    min-height: 30rem;
+    width: 100%;
+    padding: 6rem;
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: 300;
+      font-size: 1.125rem;
+      width: calc(100% - 12rem);      
+    }
+  }
+  .content-image {
+    min-height: 30rem;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 @media (min-width: 768px) {

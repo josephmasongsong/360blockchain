@@ -5,8 +5,15 @@
 
 <section class="bg-white basic-page-section">
   <div class="container">
+
+      <ul class='list-inline subnavigation'>
+        <li><a href="/team_leaders">Team Leaders</a></li>
+        <li class='active'><a href="#">Stock Quote</a></li>
+        <li><a href="/investors">Investors</a></li>
+      </ul>
+
     <div class="row">
-      <div class="col-sm-6 sq-content mb">
+      <div class="col-sm-12 sq-content mb">
         <h2 class="headline">
           Canadian Securities Exchange
           <!-- <small>Real time, 15 minute delayed stock quote</small> -->
@@ -22,6 +29,7 @@
         </ul>
       </div>
 
+      {% comment %}
       <div class="col-sm-6 sq-content mb">
         <h2 class="headline">
           Frankfurt Stock Exchange
@@ -37,6 +45,7 @@
           <li class="list-group-item">Volume:<span id="5-volume"></span></li>
         </ul>
       </div>
+      {% endcomment %}
       <div class="col-sm-12 sq-content hr">
         <p class="symbol">The most recent data point is the cumulative prices and volume information of the current trading day, updated realtime.</p>
       </div>

@@ -4,15 +4,29 @@
 <nav class="weekend-navbar navbar-fixed-top hidden-sm hidden-xs">
   <div class="container">
     <ul class="list-inline">
-      <li><a href="{% if page.slug == 'landing_page' %}#ourPositioning{% else %}/landing_page#ourPositioning{% endif %}" class="scrolltarget">Our Positioning</a></li>
+      <li><a href="{% if page.slug == 'landing_page' %}#aboutUs{% else %}/landing_page#aboutUs{% endif %}" class="scrolltarget">About Us</a></li>
+
+      {% comment %}
       <li><a href="{% if page.slug == 'landing_page' %}#ourApproach{% else %}/landing_page#ourApproach{% endif %}" class="scrolltarget">Our Approach</a></li>
+      {% endcomment %}
+
+      {% comment %}
+
       <li><a href="{% if page.slug == 'landing_page' %}#ourFacilities{% else %}/landing_page#ourFacilities{% endif %}" class="scrolltarget">Our Facilities</a></li>
+      {% endcomment %}
+
       <li><a href="{% if page.slug == 'landing_page' %}#ourBrands{% else %}/landing_page#ourBrands{% endif %}" class="scrolltarget">Our Brands</a></li>
+
+      <li><a href="/under_construction">Our Shop</a></li>
     </ul>
     </span>
-    <a href="/" style="margin:0 1.5rem 0 0;"><img src="{{ site.meta_image_url }}" alt="" id="logo-navbar"></a>
+    <a href="/" style="margin:0;"><img src="{{ site.meta_image_url }}" alt="" id="logo-navbar"></a>
     <ul class="list-inline">
+      {% comment %}
+
       <li><a href="{% if page.slug == 'landing_page' %}#ourTechnologies{% else %}/landing_page#ourTechnologies{% endif %}" class="scrolltarget">Our Technologies</a></li>
+      {% endcomment %}
+
       {% for child in site.root_nav_pages %}
       {% if child.leaf? or child.nav_children.size == 0 %}
       <li {% if child.is_or_is_ancestor_of_current_page? %}class="active"{% endif %}>
@@ -53,11 +67,17 @@
     <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
 
       <ul class="nav navbar-nav navbar-right">
-      <li><a href="{% if page.slug == 'landing_page' %}#ourPositioning{% else %}/landing_page#ourPositioning{% endif %}" class="scrolltarget" data-toggle="collapse" data-target=".navbar-collapse.in">Our Positioning</a></li>
-      <li><a href="{% if page.slug == 'landing_page' %}#ourApproach{% else %}/landing_page#ourApproach{% endif %}" class="scrolltarget" data-toggle="collapse" data-target=".navbar-collapse.in">Our Approach</a></li>
+      <li><a href="{% if page.slug == 'landing_page' %}#aboutUs{% else %}/landing_page#aboutUs{% endif %}" class="scrolltarget" data-toggle="collapse" data-target=".navbar-collapse.in">About Us</a></li>
+      <!-- <li><a href="{% if page.slug == 'landing_page' %}#ourApproach{% else %}/landing_page#ourApproach{% endif %}" class="scrolltarget" data-toggle="collapse" data-target=".navbar-collapse.in">Our Approach</a></li> -->
+      {% comment %}
       <li><a href="{% if page.slug == 'landing_page' %}#ourFacilities{% else %}/landing_page#ourFacilities{% endif %}" class="scrolltarget" data-toggle="collapse" data-target=".navbar-collapse.in">Our Facilities</a></li>
+      {% endcomment %}
       <li><a href="{% if page.slug == 'landing_page' %}#ourBrands{% else %}/landing_page#ourBrands{% endif %}" class="scrolltarget" data-toggle="collapse" data-target=".navbar-collapse.in">Our Brands</a></li>
+      {% comment %}
       <li><a href="{% if page.slug == 'landing_page' %}#ourTechnologies{% else %}/landing_page#ourTechnologies{% endif %}" class="scrolltarget" data-toggle="collapse" data-target=".navbar-collapse.in">Our Technologies</a></li>
+      {% endcomment %}
+
+      <li><a href="/under_construction" class="scrolltarget" data-toggle="collapse" data-target=".navbar-collapse.in">Our Shop</a></li>
 
       {% for child in site.root_nav_pages %}
       {% if child.leaf? or child.nav_children.size == 0 %}

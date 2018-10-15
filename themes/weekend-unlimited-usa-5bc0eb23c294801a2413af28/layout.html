@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page_title }}</title>
+
+    <!-- Bootstrap -->
+    <link href="theme.scss" rel="stylesheet">
+    <link href="weekend-unlimited-usa.scss" rel="stylesheet">
+
+    {{ content_for_header }}
+
+    <script type="text/javascript">
+      NB.appConfig.userIsLoggedIn = {{request.logged_in?}};
+    </script>
+  </head>
+  <body class="{{ page.page_class_name }} page-{{ request.template | replace: '_', '-' }} page-{{ page.slug | replace: '_', '-' }} js">
+
+    {% unless page.slug == 'under_construction' %}
+      {% include 'nav' %}
+    {% else %}
+    {% endunless %}
+
+
+    {% if request.is_sidebar? %}
+    {% include "columns_2" %}
+    {% else %}
+    {% include "columns_1" %}
+    {% endif %}
+
+
+
+      {% unless page.slug == 'under_construction' %}
+      <footer>
+        {{ content_for_footer }}
+      </footer>
+      {% else %}
+        {{ content_for_footer }}
+      {% endunless %}
+
+    {% if site.has_background_image? %}
+      <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/jquery.backstretch.min.js"></script>
+      <script type="text/javascript">
+        jQuery.backstretch("{{ site.background_image_url }}", {speed: 0});
+      </script>
+      <![endif]-->
+      <style>
+        body {
+          background: url('{{ site.background_image_url }}') no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+        }
+    </style>
+    {% endif %}
+
+    <script src="bootstrap.js"></script>
+
+  </body>
+</html>
+

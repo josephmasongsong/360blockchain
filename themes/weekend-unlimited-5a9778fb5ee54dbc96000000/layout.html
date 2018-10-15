@@ -10,6 +10,7 @@
     <script src="https://use.fontawesome.com/e404551e3e.js"></script>
 
     <!-- Bootstrap -->
+    <link href="animate.css" rel="stylesheet">
     <link href="theme.scss" rel="stylesheet">
     <link href="jquery.fullpage.css" rel="stylesheet">
     <link href="font_brandon.css" rel="stylesheet">
@@ -25,7 +26,7 @@
       NB.appConfig.userIsLoggedIn = {{request.logged_in?}};
     </script>
   </head>
-  <body class="{{ page.page_class_name }} page-{{ request.template | replace: '_', '-' }} js">
+  <body class="{{ page.page_class_name }} page-{{ request.template | replace: '_', '-' }} page-{{ page.slug | replace: '_', '-' }} js">
     <div id="wrapper">
       
       {{ content_for_notifications }}
@@ -34,9 +35,11 @@
      
       {% include 'nav' %}
 
-    {% elsif page.is_homepage? == false %}
+    {% elsif page.slug != 'landing_page' and page.slug != 'under_construction' %}
 
       {% include 'static_nav' %}
+
+    {% elsif page.slug == 'under_construction' %}
 
     {% endif %}
 
@@ -48,11 +51,14 @@
       {% endif %}
 
     
-
+      {% unless page.slug == 'under_construction' %}
       <footer>
         {{ content_for_footer }}
         {% include 'footer_content' %}
       </footer>
+      {% else %}
+        {{ content_for_footer }}
+      {% endunless %}
       
     </div>
 
@@ -66,6 +72,7 @@
 
     {% if page.slug == 'landing_page' %}
     <script src="jquery-modal-video.min.js"></script>
+    <script src="wow.min.js"></script>
     <script src="site.js"></script>
     {% endif %}
 

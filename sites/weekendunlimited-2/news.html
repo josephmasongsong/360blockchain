@@ -5,8 +5,6 @@
 </div>
 
 
-
-
 <section class="bg-white basic-page-section">
   <div class="container">
 
@@ -16,8 +14,10 @@
       <li><a href="/media">Media</a></li>
     </ul>
 
+
+    {% if page.blog.most_recent_blog_posts > 0 %}
     {% for post in page.blog.most_recent_blog_posts %}
-    
+
     <a href="{{ post.url }}"><h2>{{ post.headline }}</h2></a>
     <span class="date">{{ post.published_at | date: '%B %d, %Y %l:%M %p' }}</span>
     {{ post.blog_post.content }}
@@ -29,6 +29,9 @@
     <hr>     
     
     {% endfor %}
+    {% else %}
+    <h2>Stay Tuned For Updates</h2>
+    {% endif %}
 
     {{ page.blog.most_recent_blog_posts | paginate prev_label: "&laquo;" next_label: "&raquo;" | replace:'<div class="pagination">','<nav class="pagination-container">' | replace:'<ul>','<ul class="pagination">' | replace:'</div>','</nav>' }}
 

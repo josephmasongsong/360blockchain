@@ -8,20 +8,82 @@
     {% endfor %}
   </section>
 
-  
+ <section>
+  <div class="container-fluid no-padding" id="aboutUs">
+    <div class="row no-pad">
+      {% assign new_children_array = page.children | sort: 'published_at' %}
+      {% for child in new_children_array %}
+
+      {% if child.slug == 'our_vision' %}
+      <div class="col-sm-6 no-padding">
+        <div class="content-container bg-green">
+          <div class="content wow fadeIn">
+            <h1>{{ child.headline }}</h1>
+            {{ child.basic.content }}           
+          </div>          
+        </div>
+      </div>
+      <div class="col-sm-6 no-padding">
+        <div class="content-image" style="{% if child.features.size > 0 %}{% for feature in child.features limit: 1 %}background-image: url({{ feature.image_url }});{% endfor %}{% endif %};">
+        </div>
+      </div>
+      {% endif %}
+      {% if child.slug == 'our_positioning' %}
+      <div class="col-sm-6 no-padding">
+        <div class="content-image" style="{% if child.features.size > 0 %}{% for feature in child.features limit: 1 %}background-image: url({{ feature.image_url }});{% endfor %}{% endif %};">
+        </div>
+      </div>
+      <div class="col-sm-6 no-padding">
+        <div class="content-container bg-dark">
+          <div class="content wow fadeIn">
+            <h1>{{ child.headline }}</h1>
+            {{ child.basic.content }}           
+          </div>          
+        </div>
+      </div>
+      {% endif %}
+      {% if child.slug == 'our_approach' %}
+      <div class="col-sm-6 no-padding">
+        <div class="content-container bg-green">
+          <div class="content wow fadeIn">
+            <h1>{{ child.headline }}</h1>
+            {{ child.basic.content }}           
+          </div>          
+        </div>
+      </div>
+      <div class="col-sm-6 no-padding">
+        <div class="content-image" style="{% if child.features.size > 0 %}{% for feature in child.features limit: 1 %}background-image: url({{ feature.image_url }});{% endfor %}{% endif %};">
+        </div>
+      </div>
+      {% endif %}
+
+    {% endfor %}
+    </div>
+  </div>
+</section> 
+
+  {% comment%}
   {% subpage "our_positioning" with "our_positioning" %}
+  {% endcomment %}
 
+  {% comment%}
   {% subpage "our_approach" with "our_approach" %}
+  {% endcomment %}
 
+  {% comment%}
   {% subpage "our_facilities" with "our_facilities" %}
+  {% endcomment %}
+
 
   {% for child in page.children %}
   {% if child.slug == 'brand_popup' %}
   {% subpage "brand_popup" with "brand_popup" %}
   {% endif %}
   {% endfor %}
-
+  
+  {% comment%}
   {% subpage "our_technologies" with "our_technologies" %}
+  {% endcomment %}
 
   {% for child in page.children %}
   {% if child.slug == 'shop_announcement' %}

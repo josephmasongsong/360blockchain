@@ -61,3 +61,6 @@ function onScroll(event){
     });
 }
 
+$(document).ready(function($) {
+    new WOW().init();    
+});  

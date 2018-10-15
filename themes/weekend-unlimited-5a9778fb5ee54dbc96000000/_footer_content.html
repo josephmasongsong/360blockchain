@@ -10,7 +10,13 @@
 
       <ul class="nav">
         <li>
-          <a href="/">Home</a>
+          <a href="/landing_page#aboutUs">About Us</a>
+        </li>
+        <li>
+          <a href="/landing_page#ourBrans">Our Brands</a>
+        </li>
+        <li>
+          <a href="/under_construction">Our Shop</a>
         </li>
         {% for child in site.root_nav_pages %}       
             <li {% if child.is_or_is_ancestor_of_current_page? %}class="active"{% endif %}>

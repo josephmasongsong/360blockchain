@@ -1,0 +1,27 @@
+<div class="basic-page-header">
+  <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5a9778fb5ee54dbc96000000/attachments/original/1521494719/blobs-01.png?1521494719" alt="">
+  <h1>{{ page.headline }}</h1>
+</div>    
+
+
+  <section class="bg-white basic-page-section">
+    <div class="container">
+
+      <ul class='list-inline subnavigation'>
+        <li class='active'><a href="/team_leaders">Team Leaders</a></li>
+        <li><a href="/stock_quote">Stock Quote</a></li>
+        <li><a href="/investors">Investors</a></li>
+      </ul>
+      <div class="row">
+      {% for child in page.children %}
+        <div class="col-sm-6">
+          <h3>{{ child.headline }}</h3>
+          <span class="title">{{ child.excerpt }}</span>
+        </div>
+      {% endfor %}
+      </div>      
+
+    </div>  
+
+  </section>
+  {% subpage "newsletter" with "newsletter" %}
