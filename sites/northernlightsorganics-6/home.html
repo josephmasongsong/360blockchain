@@ -1,0 +1,32 @@
+{% if page.features_count > 0 %}
+
+{% if page.features.size > 0 %}
+<div id="northern-lights-carousel" class="carousel slide carousel-fullscreen carousel-fade" data-ride="carousel" data-pause="false">
+
+    <span class="menu-toggle">/ MENU</span>
+    
+    <div class="carousel-inner" role="listbox">
+    {% for feature in page.features %}
+      <div class="item {% if forloop.first == true %}active{% endif %}" style="background-image: url({{ feature.image_url }});">
+          <div class="overlay"></div>
+          <div class="carousel-caption">
+              <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5bd0bed84764e86797daddc5/attachments/original/1540419891/northern-lights-logo-alt.png?1540419891" >
+          </div>
+      </div>
+    {% endfor %}
+    </div>
+
+
+</div>
+{% endif %}
+
+{% endif %}
+
+{% subpage "we_are_northern_lights" with "two_columns_divided" %}
+
+{% subpage "powered_by_northern_lights" with "image_with_text" %}
+
+{% subpage "organic_roots" with "image_with_info" %}
+
+{% subpage "giving_back" with "fullwidth_callout" %}
+

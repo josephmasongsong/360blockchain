@@ -1,0 +1,37 @@
+<section id="organicroots">
+  <div class="container-fluid no-padding">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="content-and-images-container fadeIn wow">
+          
+        <h1>{{ page.headline }}</h1>
+        <div class="images-container">
+          <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5bd0bed84764e86797daddc5/attachments/original/1540419893/northern-lights-organics-green-border.png?1540419893" class="img-responsive img-bottom">
+
+          <img src="{% for feature in page.features limit: 1 %}{{ feature.image_url }}{% endfor %}" class="img-responsive img-top">  
+          <div class="vertical-text">Naturally Magical</div>        
+        </div>
+
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="content-and-images-container fadeIn wow">
+          
+          <p style="margin-bottom: 40px;">{{ page.excerpt | strip_html }}</p>
+
+          {{ page.basic.content }}
+
+          <div class="row row-eq-height">
+            <div class="col-sm-12 col-md-6">
+				{% subpage 'organic_cannabis' with 'quick_fact' %}
+            </div>
+            <div class="col-sm-12 col-md-6">
+				{% subpage 'consumers_prefer' with 'quick_fact' %}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

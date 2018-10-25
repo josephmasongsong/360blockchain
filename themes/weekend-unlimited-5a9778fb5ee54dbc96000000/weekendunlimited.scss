@@ -30,22 +30,31 @@ body {
     max-width: 100%;
     width: 600px;
     display: block;
-    margin: 80px auto 0;
-    img {
-      width: 400px;
+    margin: 50px auto 0;
+    img.we-logo {
+      width: 340px;
       display: block;
       margin: 0 auto;
+    }
+    img.we-live-logo {
+      width: 220px;
+      display: block;
+      margin: 0 auto;     
     }
     h1 {
       color: #00CE7C;
       font-weight: bold;
+      text-transform: uppercase;
     }
     p {
       color: #fff;
       font-size: 1.25rem;
+
+
     }
   }
 }
+
 
 #wrapper {
 	overflow-x: hidden;

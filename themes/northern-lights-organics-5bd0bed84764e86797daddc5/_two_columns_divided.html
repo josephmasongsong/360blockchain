@@ -1,0 +1,29 @@
+<section id="introduction">
+  <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5bd0bed84764e86797daddc5/attachments/original/1540416867/northern-lights-organics-tree.png?1540416867" alt="" class="fadeIn wow">
+  <div class="vertical-text fadeIn wow">Been Organic, Been BC</div>
+
+  <div class="container-fluid no-padding">
+    <div class="row row-eq-height no-pad">
+      <div class="col-sm-6">
+        <div class="bg-purple">
+          <div class="content-container fadeIn wow">
+
+            <h1 style="margin-bottom: 20px;">{{ page.headline }}</h1>
+            
+            {{ page.basic.content }}
+
+          </div>        
+        </div>
+
+      </div>
+      <div class="col-sm-6">
+        <div class="bg-dark-purple">
+          <div class="content-container fadeIn wow">
+            {% subpage "been_organic" with "explainer" %}
+            {% subpage "bcs_finest" with "explainer_alt" %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

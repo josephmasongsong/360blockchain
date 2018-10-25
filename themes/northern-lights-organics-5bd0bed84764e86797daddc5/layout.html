@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page_title }}</title>
+
+    <!-- Bootstrap -->
+    <link href="theme.scss" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="animate.css" rel="stylesheet">
+    <link href="northernlights.scss" rel="stylesheet">
+    {{ content_for_header }}
+
+    <script type="text/javascript">
+      NB.appConfig.userIsLoggedIn = {{request.logged_in?}};
+    </script>
+  </head>
+  <body class="{{ page.page_class_name }} page-{{ request.template | replace: '_', '-' }} js">
+    <div id="wrapper">
+      
+      {% if request.is_sidebar? %}
+      {% include "columns_2" %}
+      {% else %}
+      {% include "columns_1" %}
+      {% endif %}
+
+      <footer class="bg-dark-purple">
+        {{ content_for_footer }}
+        <div class="row">
+          <div class="col-sm-4">
+            
+           <div class="contact-container">
+              <address>
+                <b>Northern Lights Organic</b><br>
+                Suite 734, 1055 Dunsmuir Street<br>
+                Vancouver, BC., V7X 1B1<br>
+                236 317 2812
+              </address>
+              <a href="https://www.facebook.com/360blockchain/" target="_blank" class="social-media-link">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x"></i>
+                </span>
+              </a>
+              <a href="https://twitter.com/360blockchain" target="_blank" class="social-media-link">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+              </a>
+              <a href="https://www.instagram.com/360blockchain/" target="_blank" class="social-media-link">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x"></i>
+                </span>   
+              </a>
+              <a href="https://www.linkedin.com/company/360blockchain" target="_blank" class="social-media-link">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x"></i>
+                </span>
+              </a>
+              <a href="https://www.linkedin.com/company/360blockchain" target="_blank" class="social-media-link">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-youtube-play fa-stack-1x"></i>
+                </span>
+              </a>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+            <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5bd0bed84764e86797daddc5/attachments/original/1540419891/northern-lights-logo-alt.png?1540419891" class="img-responsive northern-lights-organics-logo-footer">
+          </div>
+          <div class="col-sm-4">
+            <div class="northern-lights-organics-top-of-page">
+              <a href="#top">
+                <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5bd0bed84764e86797daddc5/attachments/original/1540419891/northern-lights-organics-arrow.png?1540419891" class="img-responsive">
+                Highest Point
+                <br>
+                Of This Page    
+              </a>
+            </div>      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+
+    <script src="bootstrap.js"></script>
+    <script src="wow.min.js"></script>
+    <script src="northernlights.js"></script>
+
+  </body>
+</html>
+

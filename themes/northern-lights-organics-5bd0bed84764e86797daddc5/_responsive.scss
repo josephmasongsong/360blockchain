@@ -1,0 +1,547 @@
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+  .menu-toggle {
+    font-size: 1.125rem;
+  }
+  .carousel-fullscreen .carousel-inner .item {
+    height: 60vh;
+  }
+  .carousel-fade .carousel-inner .item img {
+    width: 180px;
+  }
+  .content-container {
+    width: calc(100% - 3rem);
+    h1 {
+      font-size: 26px;
+      &.display {
+        font-size: 36px;
+      }
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  #introduction .bg-purple, #introduction .bg-dark-purple {
+    min-height: 34rem;
+  }
+  #introduction {
+    .vertical-text {
+      left: 48.25%;
+    }
+  }
+  #poweredby {
+    padding: 1.5rem 3rem;
+    .divider:before {
+      z-index: 0;
+    }
+    .poweredBy {
+      font-size: 48px;
+      padding-left:15px;
+      margin-bottom: 20px !important;
+      small {
+        font-size:36px;
+      }
+    }
+    .content-container {
+      width: calc(100% - 3rem);
+    }
+    .facility-exterior, .poweredby-content-container {
+      top: 1.5rem;
+    }
+  }
+  #organicroots  {
+    padding: 3rem 0 20px;
+    h1 {
+      margin-left: 0;
+      font-size: 32px;
+    }
+    .content-and-images-container {
+        width: calc(100% - 3rem);
+        ul li,p {
+          font-size: 1rem;
+        }
+        .quick-fact {
+          margin-bottom: 20px;
+          h2, span.dropcap {
+            font-size: 24px;
+          }
+        }
+
+
+    }   
+    .images-container {
+      margin-top: 3rem;
+      .vertical-text {
+        right: -10.5rem;
+        top: 7.5rem;        
+      }
+      .img-top {
+          top: -20px;
+          right: -20px;
+      }
+    } 
+
+    .row-eq-height {
+      display: block;
+    }
+  }
+  #givingback {
+    padding: 1.5rem 0;
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .stripes {
+        width: 36px;
+        margin-top: 0;
+    }
+    .givingback-copy p {
+      font-size: 1rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+    }
+  }
+  footer {
+    padding: 3rem 1.5rem;
+    img.northern-lights-organics-logo-footer {
+      width: 120px;
+    }
+    .contact-container {
+    }
+    address {
+      font-size: 0.8rem;
+      padding-left: 20px;      
+      margin-bottom: 20px;
+
+    }
+  }
+}
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+  .menu-toggle {
+    font-size: 1.125rem;
+  }
+  .carousel-fade .carousel-inner .item img {
+    width: 180px;
+  }
+  .content-container {
+    width: calc(100% - 6rem);
+    h1 {
+      font-size: 32px;
+      &.display {
+        font-size: 44px;
+      }
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  #introduction .vertical-text {
+    left: 48.75%;
+  }
+  #introduction .bg-purple, #introduction .bg-dark-purple {
+    min-height: 36rem;
+  }
+  #poweredby {
+      padding: 1.5rem 3rem;
+      .poweredBy {
+        font-size: 48px;
+        margin-bottom: 20px !important;
+        small {
+          font-size: 36px;
+        }
+      }
+      .facility-exterior {
+          top: 1.5rem;
+      }
+      .poweredby-content-container {
+        top: 1.5rem;
+      }
+      .content-container {
+          width: calc(100% - 6rem);
+      }
+
+  }
+  #organicroots {
+    padding: 3rem 0;
+    h1 {
+      font-size: 36px;
+    }
+    .content-and-images-container {
+      width: calc(100% - 3rem);
+      p, ul li {
+        font-size: 1.125rem;
+      }
+    }
+    .images-container .img-top {
+      top: -20px;
+      right: -20px;
+    }
+    .images-container .vertical-text {
+      right: -10.5rem;
+      top: 7.5rem;
+    }
+  }
+  #givingback {
+    h1 {
+          font-size: 36px;
+    }
+    .stripes {
+      width: 42px;
+    }
+  }
+  footer {
+    padding: 3rem;
+    address {
+      font-size: 1rem;
+      padding-left: 20px;
+    }
+    img.northern-lights-organics-logo-footer {
+      width: 120px;
+    }
+  }
+}
+
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait) 
+ {
+.carousel-fullscreen .carousel-inner .item {
+  height: 500px;
+ }
+}
+
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px)
+ {
+
+  .menu-toggle {
+    font-size: 1rem;
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+  #organicroots .content-and-images-container p, #organicroots .content-and-images-container ul li {
+    font-size: 1rem;
+  }
+  .content-container {
+    p {
+      font-size: 1rem;
+    }
+  }
+  #introduction {
+    img {
+      display: none;
+    }
+    .content-container {
+      h1 {
+        font-size: 28px;
+      }
+      .display {
+        font-size: 36px;
+      }      
+    }    
+    .vertical-text {
+      display: none;
+    }
+  }
+  .carousel-fade .carousel-inner .item img {
+    width: 140px;
+  }
+  #poweredby {
+    padding: 15px;
+    .green-border, .facility-exterior, .divider {
+      display: none;
+    }
+    .facility-exterior {
+      display: none;
+    }
+    .poweredby-content-container {
+      position: relative;
+      top: 0;
+      display:block;
+    }
+    .content-container {
+      width: 100%;
+
+    }
+     .poweredby-content {
+      padding: 15px;
+     }
+     .poweredBy {
+        font-size: 48px;
+        padding-left: 15px;
+        small {
+          font-size: 36px;
+        }
+     }
+  }
+  #organicroots {
+    h1 {
+      margin-left: 0;
+      font-size: 32px;
+    }
+    .content-and-images-container {
+      height: inherit;
+      transform: none;
+      position: relative;
+      width: 100%;
+      left: 0;
+      padding: 0 
+    }
+  } 
+    #organicroots {
+      padding: 3rem 0;
+      .content-and-images-container {
+        padding-left: 30px;
+        padding-right: 30px;
+        .images-container {
+          left: -7.5px;
+          margin-top: 3rem;
+          margin-bottom: 30px;
+          .img-top {
+            top: -15px;
+            right: -15px;
+          }
+        }
+        .col-sm-12.col-md-6 > .quick-fact {
+          margin-bottom: 30px;
+        }
+        .col-sm-12.col-md-6:last-child > .quick-fact {
+          margin-bottom: 0;
+        }
+      }
+    }
+  .content-container {
+      top: 0;
+      left: 0;
+      -webkit-transform: none;
+      transform: none;
+      position: relative;
+      width: 100%;
+  }
+  #introduction .bg-purple, #introduction .bg-dark-purple {
+    min-height: 1px;
+    padding: 30px 15px;
+  }
+  #givingback {
+    padding: 3rem 30px;
+    h1 {
+      font-size: 36px;
+    }
+    p {
+      font-size: 1rem;
+    }
+    .stripes {
+      margin-top: 20px;
+    }
+  }
+  .contact-container {
+    margin-bottom: 3rem;
+  }
+  footer {
+    padding: 3rem 30px;
+    address {
+      font-size: 1rem;
+      padding-left: 20px;
+      margin-bottom: 20px;      
+    }
+    img.northern-lights-organics-logo-footer {
+        width: 100px;
+        position: relative;
+        left: initial;
+        transform: none;
+        float: left;
+    }
+  }
+}
+
+@media only screen 
+and (min-device-width : 411px) 
+and (max-device-width : 823px)
+and (orientation : landscape)
+ {
+
+  .menu-toggle {
+    font-size: 1rem;
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+  #organicroots .content-and-images-container p, #organicroots .content-and-images-container ul li {
+    font-size: 1rem;
+  }
+  .content-container {
+    p {
+      font-size: 1rem;
+    }
+  }
+  #introduction {
+    img {
+      display: none;
+    }
+    .content-container {
+      h1 {
+        font-size: 28px;
+      }
+      .display {
+        font-size: 36px;
+      }      
+    }    
+    .vertical-text {
+      display: none;
+    }
+  }
+  .carousel-fade .carousel-inner .item img {
+    width: 140px;
+  }
+  #poweredby {
+    padding: 15px;
+    .green-border, .facility-exterior, .divider {
+      display: none;
+    }
+    .facility-exterior {
+      display: none;
+    }
+    .poweredby-content-container {
+      position: relative;
+      top: 0;
+      display:block;
+    }
+    .content-container {
+      width: 100%;
+
+    }
+     .poweredby-content {
+      padding: 15px;
+     }
+     .poweredBy {
+        font-size: 48px;
+        padding-left: 15px;
+        small {
+          font-size: 36px;
+        }
+     }
+  }
+  #organicroots {
+    h1 {
+      margin-left: 0;
+      font-size: 32px;
+    }
+    .content-and-images-container {
+      height: inherit;
+      transform: none;
+      position: relative;
+      width: 100%;
+      left: 0;
+      padding: 0 
+    }
+  } 
+    #organicroots {
+      padding: 3rem 0;
+      .content-and-images-container {
+        padding-left: 30px;
+        padding-right: 30px;
+        .images-container {
+          left: -7.5px;
+          margin-top: 3rem;
+          margin-bottom: 30px;
+          .img-top {
+            top: -15px;
+            right: -15px;
+          }
+        }
+        .col-sm-12.col-md-6 > .quick-fact {
+          margin-bottom: 30px;
+        }
+        .col-sm-12.col-md-6:last-child > .quick-fact {
+          margin-bottom: 0;
+        }
+      }
+    }
+  .content-container {
+      top: 0;
+      left: 0;
+      -webkit-transform: none;
+      transform: none;
+      position: relative;
+      width: 100%;
+  }
+  #introduction .bg-purple, #introduction .bg-dark-purple {
+    min-height: 34rem;
+    padding: 30px 15px;
+  }
+  #givingback {
+    padding: 3rem 30px;
+    h1 {
+      font-size: 36px;
+    }
+    p {
+      font-size: 1rem;
+    }
+    .stripes {
+      margin-top: 20px;
+    }
+  }
+  footer {
+    padding: 3rem 30px;
+    .contact-container {
+      margin-bottom: 0px;
+    }
+    address {
+      font-size: 0.9rem;
+      padding-left: 20px;
+      margin-bottom: 20px;      
+    }
+    img.northern-lights-organics-logo-footer {
+      width: 100px;
+
+    }
+  }
+}
+
+@media only screen and (max-device-width: 731px) and (min-device-width: 411px) and (orientation: landscape) {
+  #introduction .bg-purple, #introduction .bg-dark-purple {
+      min-height: 1px;
+      padding: 30px 15px;
+  }
+  footer .contact-container {
+    margin-bottom: 20px;
+  }
+  footer img.northern-lights-organics-logo-footer {
+      width: 100px;
+      position: relative;
+      left: initial;
+      -webkit-transform: none;
+      transform: none;
+      float: left;
+  }
+}
+@media only screen and (max-device-width: 736px) and (min-device-width: 414px) and (orientation: landscape) {
+  #introduction .bg-purple, #introduction .bg-dark-purple {
+      min-height: 1px;
+      padding: 30px 15px;
+  }
+  footer .contact-container {
+    margin-bottom: 20px;
+  }
+  footer img.northern-lights-organics-logo-footer {
+      width: 100px;
+      position: relative;
+      left: initial;
+      -webkit-transform: none;
+      transform: none;
+      float: left;
+  }
+}
