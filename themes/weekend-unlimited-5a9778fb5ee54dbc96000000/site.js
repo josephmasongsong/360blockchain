@@ -1,4 +1,8 @@
 
+$(document).ready(function(){
+    $.ageCheck({minAge: 19, storage: "localStorage"});        
+});
+
 $(document).ready(function () {
 
     $(".js-modal-btn").modalVideo({channel:'vimeo'});
@@ -8,16 +12,16 @@ $(document).ready(function () {
       }, 8000);
 
     $(document).on("scroll", onScroll);
-  
+
     $("a[href^='#']").on('click', function (e) {
         e.preventDefault();
         $(document).off("scroll");
-        
+
         $('a').each(function () {
             $(this).parent('li').removeClass('active');
         })
         $(this).parent('li').addClass('active');
-      
+
         var target = this.hash,
 
         $target = $(target);
@@ -36,7 +40,7 @@ $(window).scroll(function() {
   } else {
     $('.weekend-navbar').removeClass('shrink');
   }
-});   
+});
 
 $(document).ready(function() {
     if(window.location.hash) {
@@ -62,5 +66,5 @@ function onScroll(event){
 }
 
 $(document).ready(function($) {
-    new WOW().init();    
-});  
+    new WOW().init();
+});

@@ -1,4 +1,6 @@
 $(document).ready(function($) {
+    $.ageCheck({minAge: 19});        
+
 	new WOW().init();    
 
 	$("a[href='#top']").click(function() {

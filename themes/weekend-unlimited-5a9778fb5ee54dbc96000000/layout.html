@@ -14,9 +14,10 @@
     <link href="theme.scss" rel="stylesheet">
     <link href="jquery.fullpage.css" rel="stylesheet">
     <link href="font_brandon.css" rel="stylesheet">
-    <link href="weekendunlimited.scss" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/flexslider.min.css" rel="stylesheet">
     <link href="popup-slider.css" rel="stylesheet">
+    <link href="agecheck.css" rel="stylesheet">
+    <link href="weekendunlimited.scss" rel="stylesheet">
     {% if page.is_homepage? == true %}
     <link href="modal-video.min.css" rel="stylesheet">
     {% endif %}
@@ -28,11 +29,11 @@
   </head>
   <body class="{{ page.page_class_name }} page-{{ request.template | replace: '_', '-' }} page-{{ page.slug | replace: '_', '-' }} js">
     <div id="wrapper">
-      
+
       {{ content_for_notifications }}
 
     {% if page.slug == 'landing_page' %}
-     
+
       {% include 'nav' %}
 
     {% elsif page.slug != 'landing_page' and page.slug != 'under_construction' %}
@@ -43,14 +44,13 @@
 
     {% endif %}
 
-  
       {% if request.is_sidebar? %}
       {% include "columns_1" %}
       {% else %}
       {% include "columns_1" %}
       {% endif %}
 
-    
+
       {% unless page.slug == 'under_construction' %}
       <footer>
         {{ content_for_footer }}
@@ -59,20 +59,20 @@
       {% else %}
         {{ content_for_footer }}
       {% endunless %}
-      
-    </div>
 
+    </div>
 
     <script src="bootstrap.js"></script>
     <script src="jquery.fullpage.js"></script>
     <script src="scrolloverflow.js"></script>
     <script src="fullpage.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider-min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider-min.js"></script>
     <script src="popup-slider.js"></script>
 
     {% if page.slug == 'landing_page' %}
     <script src="jquery-modal-video.min.js"></script>
     <script src="wow.min.js"></script>
+    <script src="jquery.agecheck.js"></script>
     <script src="site.js"></script>
     {% endif %}
 
@@ -82,4 +82,3 @@
 
   </body>
 </html>
-
