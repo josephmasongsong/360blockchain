@@ -1,8 +1,4 @@
 
-$(document).ready(function(){
-    $.ageCheck({minAge: 19, storage: "localStorage"});        
-});
-
 $(document).ready(function () {
 
     $(".js-modal-btn").modalVideo({channel:'vimeo'});

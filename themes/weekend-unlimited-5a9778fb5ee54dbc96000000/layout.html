@@ -16,9 +16,9 @@
     <link href="font_brandon.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/flexslider.min.css" rel="stylesheet">
     <link href="popup-slider.css" rel="stylesheet">
-    <link href="agecheck.css" rel="stylesheet">
     <link href="weekendunlimited.scss" rel="stylesheet">
     {% if page.is_homepage? == true %}
+    <link href="age-verification.css" rel="stylesheet">
     <link href="modal-video.min.css" rel="stylesheet">
     {% endif %}
     {{ content_for_header }}
@@ -69,10 +69,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider-min.js"></script>
     <script src="popup-slider.js"></script>
 
-    {% if page.slug == 'landing_page' %}
+    {% if page.is_homepage? == true %}
     <script src="jquery-modal-video.min.js"></script>
     <script src="wow.min.js"></script>
-    <script src="jquery.agecheck.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="age-verification.js"></script>
     <script src="site.js"></script>
     {% endif %}
 

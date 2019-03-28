@@ -1,0 +1,37 @@
+<div class="cv-hero" style="background-image: linear-gradient(rgba(51,52,69, 0.5), rgba(51,52,69, 0.5)), url('{% for feature in page.features limit: 1 %}{{ feature.image_url }}{% endfor %}')">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="hero-text">
+          <h1>{{ page.headline }}</h1>
+          <h3>{{ page.excerpt }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="cv-media">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+
+          {% assign children = page.children | sort: 'published_at' | reverse %}
+          {% for child in children %}
+            <div class="row">
+              <div class="col-md-12">
+                <h2>{{ child.headline }}</h2>
+                <span class="published-date text-muted">{{ child.excerpt }}</span>
+                <div class="content">
+                  {{ child.basic.content }}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% subpage "join" with "signup" %}

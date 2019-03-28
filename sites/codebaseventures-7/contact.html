@@ -1,0 +1,90 @@
+<div class="cv-hero" style="background-image: linear-gradient(rgba(51,52,69, 0.5), rgba(51,52,69, 0.5)), url('{% for feature in page.features limit: 1 %}{{ feature.image_url }}{% endfor %}')">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="hero-text">
+          <h1>{{ page.headline }}</h1>
+          {% if page.feedback.content.size > 0 %}
+          <h3>{{ page.feedback.content | strip_html }}</h3>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="cv-body cv-contact">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="row">
+          <div class="col-md-6 contact-general">
+            <!-- <div data-lat="49.286530" data-lon="-123.121182" id="addressMap"></div> -->
+            <h2>GENERAL</h2>
+            <table class="contact">
+              <tbody>
+                <tr>
+                  <td><i class="fas fa-map-marker-alt fa-lg"></i></td>
+                  <td>Suite 734, 1055 Dunsmuir Street, Vancouver, BC., V7X 1B1</td>
+                </tr>
+                <tr>
+                  <td><i class="far fa-envelope fa-lg"></td>
+                  <td><span><a href="mailto:info@360blockchaininc.com">info@codebase.ventures</a></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-6">
+            <h2>INVESTOR RELATIONS</h2>
+            <table class="contact">
+              <tbody>
+                <tr>
+                  <td><i class="fas fa-phone fa-lg"></i></td>
+                  <td><a href="tel:17788065150">+1 (778) 806-5150</a></td>
+                </tr>
+                <tr>
+                  <td><i class="far fa-envelope fa-lg"></i></td>
+                  <td><span><a href="mailto:IR@360Blockchaininc.com">IR@codebase.ventures</a></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-form">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 col-md-offset-1">
+        <h2>CONTACT FORM</h2>
+      </div>
+      <div class="col-md-6 col-md-offset-1">
+        {% form_for feedback %}
+        <div class="form-errors">{% error_messages_for feedback %}</div>
+        <div class="row">
+          <div class="col-md-6"><div class="form-group"><label for="feedback_first_name">First Name</label>{% text_field "first_name", class:"text form-control cv-input with-border" %}</div></div>
+          <div class="col-md-6"><div class="form-group"><label for="feedback_last_name">Last Name</label>{% text_field "last_name", class:"text form-control cv-input with-border" %}</div></div>
+        </div>
+        <div class="row">
+          <div class="col-md-12"><div class="form-group"><label for="feedback_email">Email</label>{% email_field "email", class:"text form-control cv-input with-border" %}</div></div>
+        </div>
+        <div class="row">
+          <div class="col-md-6"><div class="checkbox"><label for="feedback_email_opt_in">{% check_box "email_opt_in", class:"checkbox" %} Send me email updates</label></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12"><div class="form-group"><label for="feedback_content">{{ page.feedback.content_name }}</label>{% text_area "content", class:"textarea form-control autogrow cv-input with-border", rows: "5" %}</div>
+          </div>
+        </div>
+        {% submit_tag page.feedback.submit_button_name, class:"cv-button" %}
+        <div class="form-submit"></div>
+        {% endform_for %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% subpage "join" with "signup" %}

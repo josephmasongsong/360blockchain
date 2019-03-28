@@ -1,6 +1,7 @@
 #logo-navbar {
   vertical-align: middle;
-  width: 200px;
+  // width: 200px;
+  width: 150px;
 }
 
 nav.weekend-navbar {
@@ -28,7 +29,7 @@ nav.weekend-navbar.shrink {
 }
 nav.navbar-static-top {
   position: relative;
-  z-index: 10;  
+  z-index: 10;
 }
 
 nav.weekend-navbar.shrink #logo-navbar {
@@ -61,4 +62,3 @@ nav.weekend-navbar-mobile {
     border-radius: 4px;
   }
 }
-

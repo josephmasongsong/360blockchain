@@ -1,0 +1,32 @@
+<div class="cv-hero" style="background-image: linear-gradient(rgba(51,52,69, 0.5), rgba(51,52,69, 0.5)), url('{% for feature in page.features limit: 1 %}{{ feature.image_url }}{% endfor %}')">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="hero-text">
+          <h1>{{ page.headline }}</h1>
+          <h3>{{ page.excerpt }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="cv-body cv-investors">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="row">
+          {% for child in page.children %}
+            <div class="col-sm-6">
+              <div class="content">
+                {{ child.basic.content }}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% subpage "join" with "signup" %}

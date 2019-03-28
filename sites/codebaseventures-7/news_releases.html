@@ -1,0 +1,38 @@
+<div class="cv-hero" style="background-image: linear-gradient(rgba(51,52,69, 0.5), rgba(51,52,69, 0.5)), url('{% for feature in page.features limit: 1 %}{{ feature.image_url }}{% endfor %}')">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="hero-text">
+          <h1>{{ page.headline }}</h1>
+          <h3>For immediate release</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="cv-media">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+          {% for post in page.blog.most_recent_blog_posts %}
+            <div class="row">
+              <div class="col-md-12" id="post-{{ post.id }}">
+                <h2>{{ post.headline }}</h2>
+                <span class="published-date text-muted">{{ post.published_at | date: '%B %d, %Y %l:%M %p' }}</span>
+                <div class="content">
+                  {{ post.blog_post.content }}
+                  {% if post.blog_post.is_extended? %}
+                  <span class="read-more"><a href="{{ post.url }}">Read more</a></span>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+          <div class="row">
+            {{ page.blog.most_recent_blog_posts | paginate prev_label: "<i class='fas fa-chevron-left'></i>" next_label: "<i class='fas fa-chevron-right'></i>" | replace:'<div class="pagination">','<nav class="pagination-container">' | replace:'<ul>','<ul class="pagination">' | replace:'</div>','</nav>' }}
+          </div>
+      </div>
+    </div>
+  </div>
+</section>

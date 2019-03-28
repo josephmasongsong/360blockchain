@@ -1,0 +1,36 @@
+<div class="cv-header">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="hero-text">
+          <h1>{{ page.headline }}</h1>
+          <h3>{{ page.published_at | date: '%B %d, %Y %l:%M %p' }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="cv-media">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        {{ page.blog_post.content_full }}
+        <div class="like-page">
+          {% include "like_page" %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="forward-looking-statements cv-body">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        {% subpage "forward" with "forward" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% subpage "join" with "signup" %}

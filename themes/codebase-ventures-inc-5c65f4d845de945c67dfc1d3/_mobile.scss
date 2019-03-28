@@ -1,0 +1,380 @@
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  .navbar-brand img {
+    width: 200px;
+  }
+  .cv-header .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  .hero-text h3 {
+    font-size: 1.25rem;
+  }
+  .cv-newsletter {
+    .cv-input {
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+    .cv-button {
+      width: 100%;
+    }
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  body {
+    padding-top: 61px;
+  }
+  .under-construction  {
+    width: inherit;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 18px;
+    .cv-input {
+      margin-bottom: 10px;
+    }
+    .copy {
+      font-size: 14px;
+    }
+  }
+  .cv-logo-homepage {
+    left: 15px;
+    right: 15px;
+    transform: translateY(-50%);
+    img {
+      margin: 0 auto 0;
+    }
+    h1 {
+      font-size: 1rem;
+    }
+  }
+  .hero-text {
+    h1 {
+      font-size: 2.25rem;
+    }
+    h3 {
+      font-size: 1.125rem;
+    }
+  }
+  .cv-header .hero-text h1 {
+    font-size: 1.75rem;
+  }
+  .cv-nav {
+    .col-lg-10.col-lg-offset-1, .container-fluid {
+      padding: 0 !important;
+    }
+  }
+  .navbar-toggle {
+    margin-right: 2rem;
+    padding: 0;
+    margin-top: 1.45rem;
+    margin-bottom: 0;
+    border: 0;
+    border-radius: 0;
+  }
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+  }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    border-radius: 0;
+    height: 3px;
+    background-color: #333445;
+  }
+  .navbar-nav>li>a {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+    padding: 1rem 2rem;
+  }
+  .navbar-nav .open .dropdown-menu>li>a, .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 1rem 2rem 1rem 4rem;
+  }
+  .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+    max-height: inherit;
+  }
+  .navbar-brand {
+    padding: 1.25rem 0 1.25rem 2rem;
+  }
+  .navbar-brand img {
+    width: 160px;
+  }
+  .cv-latest-news h2 {
+    font-size: 1.5rem;
+  }
+  .cv-latest-news h3 {
+    font-size: 1.25rem;
+  }
+  .cv-contact h2, .contact-form h2 {
+    font-size: 1.5rem;
+  }
+  table.contact td {
+    font-size: 1rem;
+  }
+  .contact-general {
+    margin-bottom: 3.5rem;
+  }
+  .media-content {
+    margin-bottom: 0.75rem;
+  }
+  .cv-body {
+    font-size: 1rem;
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  .row.no-gutters {
+    display: block;
+  }
+  .row.no-gutters > [class*='col-'] {
+    display: block;
+  }
+  .photo-container {
+    min-height: 325px;
+  }
+  .about-blurb {
+    padding: 3.5rem 30px;
+    font-size: 1rem;
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  .screenshot {
+    margin-bottom: 1rem;
+  }
+  .forward-looking-statements {
+    font-size: 0.9rem;
+  }
+  .cv-media p {
+    font-size: 1rem;
+  }
+  .cv-media .read-more {
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+  .pagination-container {
+    text-align: center;
+  }
+  .cv-media h2 {
+    font-size: 1.25rem;
+  }
+  .cv-media li {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .cv-investors {
+    font-size: 1rem;
+  }
+  .cv-investors h2 {
+    font-size: 1.5rem;
+  }
+  .cv-stockquote {
+    font-size: 1rem;
+    .symbol {
+      font-size: 0.9rem;
+    }
+  }
+  .cv-stockquote .exchange-name {
+    font-size: 1.5rem;
+  }
+  .cv-newsletter h3 {
+    font-size: 1.25rem;
+  }
+  .cv-newsletter .cv-input {
+    margin-bottom: 1rem;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  .cv-button {
+    width: 100%;
+  }
+  footer .col-lg-3.col-lg-offset-1 {
+    text-align: center;
+  }
+  footer {
+    .nav>li>a {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { }
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  body {
+    padding-top: 61px;
+  }
+  .under-construction  {
+    width: inherit;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 18px;
+    .cv-input {
+      margin-bottom: 10px;
+    }
+    .copy {
+      font-size: 14px;
+    }
+  }
+  .cv-logo-homepage {
+    left: 15px;
+    right: 15px;
+    transform: translateY(-50%);
+    img {
+      margin: 0 auto 0;
+    }
+    h1 {
+      font-size: 1rem;
+    }
+  }
+  .hero-text {
+    h1 {
+      font-size: 2.25rem;
+    }
+    h3 {
+      font-size: 1.125rem;
+    }
+  }
+  .cv-header .hero-text h1 {
+    font-size: 1.75rem;
+  }
+  .cv-nav {
+    .col-lg-10.col-lg-offset-1, .container-fluid {
+      padding: 0 !important;
+    }
+  }
+  .navbar-toggle {
+    margin-right: 2rem;
+    padding: 0;
+    margin-top: 1.45rem;
+    margin-bottom: 0;
+    border: 0;
+    border-radius: 0;
+  }
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+  }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    border-radius: 0;
+    height: 3px;
+    background-color: #333445;
+  }
+  .navbar-nav>li>a {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+    padding: 1rem 2rem;
+  }
+  .navbar-nav .open .dropdown-menu>li>a, .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 1rem 2rem 1rem 4rem;
+  }
+  .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+    max-height: inherit;
+  }
+  .navbar-brand {
+    padding: 1.25rem 0 1.25rem 2rem;
+  }
+  .navbar-brand img {
+    width: 160px;
+  }
+  .cv-latest-news h2 {
+    font-size: 1.5rem;
+  }
+  .cv-latest-news h3 {
+    font-size: 1.25rem;
+  }
+  .cv-contact h2, .contact-form h2 {
+    font-size: 1.5rem;
+  }
+  table.contact td {
+    font-size: 1rem;
+  }
+  .contact-general {
+    margin-bottom: 3.5rem;
+  }
+  .media-content {
+    margin-bottom: 0.75rem;
+  }
+  .cv-body {
+    font-size: 1rem;
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  .row.no-gutters {
+    display: block;
+  }
+  .row.no-gutters > [class*='col-'] {
+    display: block;
+  }
+  .photo-container {
+    min-height: 325px;
+  }
+  .about-blurb {
+    padding: 3.5rem 30px;
+    font-size: 1rem;
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  .screenshot {
+    margin-bottom: 1rem;
+  }
+  .forward-looking-statements {
+    font-size: 0.9rem;
+  }
+  .cv-media p {
+    font-size: 1rem;
+  }
+  .cv-media .read-more {
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+  .pagination-container {
+    text-align: center;
+  }
+  .cv-media h2 {
+    font-size: 1.25rem;
+  }
+  .cv-media li {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .cv-investors {
+    font-size: 1rem;
+  }
+  .cv-investors h2 {
+    font-size: 1.5rem;
+  }
+  .cv-stockquote {
+    font-size: 1rem;
+    .symbol {
+      font-size: 0.9rem;
+    }
+  }
+  .cv-stockquote .exchange-name {
+    font-size: 1.5rem;
+  }
+  .cv-newsletter h3 {
+    font-size: 1.25rem;
+  }
+  .cv-newsletter .cv-input {
+    margin-bottom: 1rem;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  .cv-button {
+    width: 100%;
+  }
+  footer .col-lg-3.col-lg-offset-1 {
+    text-align: center;
+  }
+  footer {
+    .nav>li>a {
+      font-size: 0.9rem;
+    }
+  }
+}

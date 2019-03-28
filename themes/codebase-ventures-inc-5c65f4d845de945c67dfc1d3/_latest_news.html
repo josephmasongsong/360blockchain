@@ -1,0 +1,20 @@
+
+
+<section class="cv-latest-news">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 col-md-offset-1">
+        <h2>LATEST NEWS</h2>
+        <p class="hidden-xs"><a href="/news_releases">See all news releases from Codebase Ventures Inc.</a></p>
+      </div>
+      <div class="col-md-7 posts-container">
+        {% for post in site.most_recent_blog_post_pages limit: 4 %}
+        <div class="single-post">
+          <a href="{{ post.url }}"><h3>{{ post.headline }}</h3></a>
+          <span class="published-date text-muted">{{ post.published_at | date: '%B %d, %Y %l:%M %p' }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

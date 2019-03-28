@@ -1,0 +1,15 @@
+<div class="row" style="margin-top: 50px;margin-bottom:50px;">
+  {% form_for signup %}
+     <div class="col-sm-7">
+       {% hidden_field_tag "page_id", page.id %}
+       <div class="form-errors">{% error_messages_for signup %}</div>
+       <input required="" class="text user-error form-control cv-input" id="signup_email" name="signup[email]" placeholder="Enter your email..." type="email" aria-invalid="true" onkeyup="checkInput(this.value)" style="width: 100%">
+     </div>
+     <div class="col-sm-5">
+       <button type="submit" class="btn btn-primary btn-lg btn-block cv-button" name="commit" value="Join">
+         JOIN MAILING LIST
+       </button>
+       <div class="form-submit"></div>
+     </div>
+   {% endform_for %}
+</div>

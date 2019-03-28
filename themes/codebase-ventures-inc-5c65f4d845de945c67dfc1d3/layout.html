@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page_title }}</title>
+
+    <!-- Bootstrap -->
+    <link href="hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="theme.scss" rel="stylesheet">
+    <link href="codebaseventures.scss" rel="stylesheet">
+    {{ content_for_header }}
+    {% comment %}
+    {% if page.slug == 'contact' %}
+    <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCtvzi62JXVGiC5BOpeLHcoJ3VvHf8IYfM&amp;libraries=weather,geometry,visualization,places,drawing' type='text/javascript'></script>
+    {% endif %}
+    {% endcomment %}
+    <script type="text/javascript">
+      NB.appConfig.userIsLoggedIn = {{request.logged_in?}};
+    </script>
+  </head>
+  <body class="{{ page.page_class_name }} page-{{ request.template | replace: '_', '-' }} js">
+    {{ content_for_notifications }}
+    <div id="wrapper">
+      {% unless page.slug == "landing_page" %}
+      {% include "nav" %}
+      {% endunless %}
+
+
+      {% yield %}
+
+      {% if page.slug == "landing_page" %}
+      {{ content_for_footer }}
+      {% else %}
+      <footer>
+        {{ content_for_footer }}
+        {% include "footer" %}
+      </footer>
+      {% endif %}
+    </div>
+
+    {% if site.has_background_image? and page.is_homepage? == true %}
+      <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/jquery.backstretch.min.js"></script>
+      <script type="text/javascript">
+        jQuery.backstretch("{{ site.background_image_url }}", {speed: 0});
+      </script>
+      <![endif]-->
+      <style>
+        body {
+          background: url('{{ site.background_image_url }}') no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+        }
+    </style>
+    {% endif %}
+
+    <script src="bootstrap.js"></script>
+    <script>
+      window.FontAwesomeConfig = {
+        searchPseudoElements: true
+      }
+    </script>
+    <script type="text/javascript" src="codebase.js"></script>
+    {% if page.slug == "stock_quote" %}
+    <script type="text/javascript" src="stockquote.js"></script>
+    {% endif %}
+    {% comment %}
+    {% if page.slug == 'contact' %}
+    <script src="showmap.js"></script>
+    {% endif %}
+    {% endcomment %}
+  </body>
+</html>

@@ -1,34 +1,46 @@
-{% include "breadcrumbs" %}
+<div class="container">
 
-{% if page.headline.size > 0 %}
-<h2 class="headline">{{ page.headline }}</h2>
-{% endif %}
+  {% include "breadcrumbs" %}
 
-<div id="content">
+  {% if page.headline.size > 0 %}
+  <h2 class="headline" style="margin-bottom: 30px;">{{ page.headline }}</h2>
+  {% endif %}
 
-  <div id="intro" class="intro">
-    <div class="text-content">
-      {{ page.basic.content }}
+  <div id="content">
+
+
+
+    {% if page.parent.slug == 'media' %}
+    <div class="video" style="min-height:560px; min-height: 315px; max-width: 100%; width: 100%; margin-bottom: 20px;">
+      {{ page.excerpt }}
     </div>
+    {% endif %}
+
+    <div id="intro" class="intro">
+      <div class="text-content" style="font-size: 20px;">
+        {{ page.basic.content }}
+      </div>
+    </div>
+
+    {% if page.tags_count > 0 %}
+    <div class="page-tags">
+      {% include "page_tags" with page %}
+    </div>
+    {% endif %}
+
+    {% if page.is_homepage? == true and site.page_tags contains "homepage" %}
+      {% tag "homepage" with "homepage_widget" %}
+    {% endif %}
+
+    <div class="like-page">
+      <strong>Do you like this page?</strong>
+      {% include "like_page" %}
+    </div>
+
+    {% if page.show_stream? %}
+    {% include "page_stream" %}
+    {% endif %}
+
   </div>
-
-  {% if page.tags_count > 0 %}
-  <div class="page-tags">
-    {% include "page_tags" with page %}
-  </div>
-  {% endif %}
-
-  {% if page.is_homepage? == true and site.page_tags contains "homepage" %}
-    {% tag "homepage" with "homepage_widget" %}
-  {% endif %}
-
-  <div class="like-page">
-    <strong>Do you like this page?</strong>
-    {% include "like_page" %}
-  </div>
-
-  {% if page.show_stream? %}
-  {% include "page_stream" %}
-  {% endif %}
 
 </div>

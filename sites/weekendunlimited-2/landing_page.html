@@ -1,6 +1,9 @@
 <div id="fullpage">
-  <section class="section" style="background: url('{% for feature in page.features limit: 1 %}{{ feature.image_url }}{% endfor %}'); background-size: cover; background-position: center;" id="section1">
-    <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5a9778fb5ee54dbc96000000/attachments/original/1534375919/tagline-edit.png?1534375919" alt="" class="tagline">
+  <section class="section home-banner" style="background: url('{% for feature in page.features limit: 1 %}{{ feature.image_url }}{% endfor %}'); background-size: cover; background-position: center;" id="section1">
+
+
+    <img src="https://assets.nationbuilder.com/360blockchain/pages/195/attachments/original/1550612326/just-pot.png?1550612326" alt="" class="tagline">
+
     {% for child in page.children %}
     {% if child.slug == 'video_toggle' %}
     <button class="js-modal-btn float" data-video-id={{ child.excerpt }} >Watch Our Video <i class="fa fa-play-circle" aria-hidden="true"></i></button>
@@ -19,8 +22,8 @@
         <div class="content-container bg-green">
           <div class="content wow fadeIn">
             <h1>{{ child.headline }}</h1>
-            {{ child.basic.content }}           
-          </div>          
+            {{ child.basic.content }}
+          </div>
         </div>
       </div>
       <div class="col-sm-6 no-padding">
@@ -37,8 +40,8 @@
         <div class="content-container bg-dark">
           <div class="content wow fadeIn">
             <h1>{{ child.headline }}</h1>
-            {{ child.basic.content }}           
-          </div>          
+            {{ child.basic.content }}
+          </div>
         </div>
       </div>
       {% endif %}
@@ -47,8 +50,8 @@
         <div class="content-container bg-green">
           <div class="content wow fadeIn">
             <h1>{{ child.headline }}</h1>
-            {{ child.basic.content }}           
-          </div>          
+            {{ child.basic.content }}
+          </div>
         </div>
       </div>
       <div class="col-sm-6 no-padding">
@@ -60,7 +63,7 @@
     {% endfor %}
     </div>
   </div>
-</section> 
+</section>
 
   {% comment%}
   {% subpage "our_positioning" with "our_positioning" %}
@@ -80,7 +83,7 @@
   {% subpage "brand_popup" with "brand_popup" %}
   {% endif %}
   {% endfor %}
-  
+
   {% comment%}
   {% subpage "our_technologies" with "our_technologies" %}
   {% endcomment %}
@@ -92,5 +95,5 @@
   {% endfor %}
 
   {% subpage "newsletter" with "newsletter" %}
-  
+
 </div>

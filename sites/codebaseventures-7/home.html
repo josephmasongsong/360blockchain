@@ -1,0 +1,68 @@
+<div class="cv-hero-homepage" style="background-image: linear-gradient(rgba(51,52,69, 0.5), rgba(51,52,69, 0.5)), url('{% for feature in page.features limit: 1 %}{{ feature.image_url }}{% endfor %}')">
+  <div class="cv-logo-homepage">
+    <img src="https://assets.nationbuilder.com/360blockchain/pages/537/attachments/original/1550386734/codebase-ventures-white.png?1550386734" class="img-responsive">
+    <h1>CSE: CODE ● FWB: C5B ● OTC: BKLLF</h1>
+  </div>
+</div>
+
+<section class="cv-body">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 how-we-invest">
+        {% subpage "our_mission" with "our_mission" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container-fluid">
+    <div class="row no-gutters">
+      <div class="col-sm-6 photo-container" style="background: url('https://assets.nationbuilder.com/360blockchain/pages/537/attachments/original/1550565242/startup-photos.jpg?1550565242') no-repeat center center; background-size: cover;">
+      </div>
+      <div class="col-sm-6 about-blurb">
+        {% subpage "about_us" with "about_us" %}
+      </div>
+    </div>
+    <div class="row no-gutters">
+      <div class="col-sm-6 about-blurb">
+        {% subpage "how_we_invest" with "how_we_invest" %}
+      </div>
+      <div class="col-sm-6 photo-container" style="background: url('https://assets.nationbuilder.com/360blockchain/pages/537/attachments/original/1550610852/programmer.jpeg?1550610852') no-repeat center center; background-size: cover;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cv-columns">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="row">
+          <div class="col-sm-3 col-xs-6 text-center">
+            <a href="/ico_ranker" >
+              <img src="https://assets.nationbuilder.com/360blockchain/pages/537/attachments/original/1550562204/ico-ranker-canva.png?1550562204" class="img-responsive">
+            </a>
+          </div>
+          <div class="col-sm-3 col-xs-6  text-center">
+            <a href="/arcology" >
+              <img src="https://assets.nationbuilder.com/360blockchain/pages/537/attachments/original/1550562205/arcology-canva.png?1550562205" class="img-responsive">
+            </a>
+          </div>
+          <div class="col-sm-3 col-xs-6  text-center">
+            <a href="/pressland">
+              <img src="https://assets.nationbuilder.com/360blockchain/pages/537/attachments/original/1550562204/pressland-canva.png?1550562204" class="img-responsive">
+            </a>
+          </div>
+          <div class="col-sm-3 col-xs-6  text-center">
+            <img src="https://assets.nationbuilder.com/360blockchain/pages/537/attachments/original/1550562519/blockchain-ranker-canva.png?1550562519" class="img-responsive">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "latest_news" %}
+
+{% subpage "join" with "signup" %}

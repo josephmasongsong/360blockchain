@@ -39,7 +39,7 @@ body {
     img.we-live-logo {
       width: 220px;
       display: block;
-      margin: 0 auto;     
+      margin: 0 auto;
     }
     h1 {
       color: #00CE7C;
@@ -79,6 +79,18 @@ h1, h2, h3, h4, h5 {
   color: $brand-colour;
 }
 
+.home-banner {
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.35);
+  }
+}
+
 .basic-page-header {
   width: 435px;
   position: absolute;
@@ -87,7 +99,7 @@ h1, h2, h3, h4, h5 {
   img {
     width: 100%;
     position: relative;
-    z-index: 1;    
+    z-index: 1;
   }
   h1, h2 {
     position: absolute;
@@ -96,7 +108,7 @@ h1, h2, h3, h4, h5 {
     transform: translate(-50%, -50%);
     color: #fff;
     z-index: 2;
-    font-weight: bold;    
+    font-weight: bold;
   }
 }
 .basic-page-section {
@@ -124,7 +136,7 @@ h1, h2, h3, h4, h5 {
   }
   .list-group .list-group-item:last-child {
       border-bottom: 0;
-  }  
+  }
 }
 
 .sp-content h2 {
@@ -139,7 +151,7 @@ h1, h2, h3, h4, h5 {
   position: absolute;
   left: 4rem;
   top: 2rem;
-  color: #fff;  
+  color: #fff;
 }
 
 .property-highlights, .more-property-highlights {
@@ -156,7 +168,7 @@ h1, h2, h3, h4, h5 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
   z-index: 3;
   width: 435px;
   text-align: center;
@@ -169,7 +181,7 @@ h1, h2, h3, h4, h5 {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);     
+        transform: translate(-50%, -50%);
     }
   }
 }
@@ -224,10 +236,10 @@ h1, h2, h3, h4, h5 {
   background-color: rgba(0,0,0,0.35);
 }
 .brand-image {
-  background-size: cover; 
-  background-position: bottom; 
-  height: 300px; 
-  width: 100%; 
+  background-size: cover;
+  background-position: bottom;
+  height: 300px;
+  width: 100%;
   margin-bottom: 3.5rem;
 }
 
@@ -276,7 +288,7 @@ h1, h2, h3, h4, h5 {
     -webkit-transition: opacity 500ms ease-out;
     -moz-transition: opacity 500ms ease-out;
     -o-transition: opacity 500ms ease-out;
-    background-color: rgba(#000, 0.65); 
+    background-color: rgba(#000, 0.65);
 
     span {
         display: block;
@@ -296,12 +308,36 @@ h1, h2, h3, h4, h5 {
 }
 
 .tagline {
+    // position: absolute;
+    // max-width: 500px;
+    // width: 100%;
+    // left: 50%;
+    // bottom: 5rem;
+    // transform: translateX(-50%);
     position: absolute;
-    max-width: 500px;
+    max-width: 1024px;
     width: 100%;
     left: 50%;
-    bottom: 5rem;
-    transform: translateX(-50%);  
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.recreational-lifestyle-brands {
+  padding: 3.5rem;
+  background: rgba(0,0,0,0.85);
+  display: inline-block;
+  max-width: 821px;
+  max-height: 615px;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .float{
@@ -370,7 +406,7 @@ h1, h2, h3, h4, h5 {
       transform: translate(-50%, -50%);
       font-weight: 300;
       font-size: 1.125rem;
-      width: calc(100% - 12rem);      
+      width: calc(100% - 12rem);
     }
   }
   .content-image {
@@ -403,6 +439,3 @@ h1, h2, h3, h4, h5 {
 }
 
 @import "mobile";
-
-
-
