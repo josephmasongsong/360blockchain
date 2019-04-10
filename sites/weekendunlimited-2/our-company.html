@@ -1,0 +1,120 @@
+<div class="container-fluid p-0">
+  <div class="row no-gutters">
+    <div class="col-sm-11 col-sm-offset-1">
+      <div class="page-header-container">
+        <h1 class="color-stone headline">{{ page.headline }}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid p-0">
+  <div class="row no-gutters">
+    <div class="col-sm-11 col-sm-offset-1">
+
+      <section class="team-leaders">
+
+        <h1 class="color-greenchalk text-uppercase font-weight-bold">Team Leaders</h1>
+
+        <div class="row">
+          {% subpage "team_leaders" with "team_leaders" %}
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<section class="stock-quote" style="background:url({% for feature in page.features limit: 1%}{{ feature.image_url }}{% endfor %}) no-repeat center; background-size: cover;">
+  <div class="stock-quote-contents">
+    <h4 class="stock-header">Stock Quote</h4>
+    <h1 class="font-weight-light exchange-header">Canadian Securities Exchange: <strong>POT</strong></h1>
+    <div class="container-fluid stock-ticker">
+      <div class="col-sm-2 col-sm-offset-1 col-xs-6">
+        <h3>Open</h3>
+        <h1 id="1_open">N/A</h1>
+      </div>
+      <div class="col-sm-2 col-xs-6">
+        <h3>High</h3>
+        <h1 id="2_high">N/A</h1>
+      </div>
+      <div class="col-sm-2 col-xs-6">
+        <h3>Low</h3>
+        <h1 id="3_low">N/A</h1>
+      </div>
+      <div class="col-sm-2 col-xs-6">
+        <h3>Close</h3>
+        <h1 id="4_close">N/A</h1>
+      </div>
+      <div class="col-sm-2 col-xs-12">
+        <h3>Volume</h3>
+        <h1 id="5_volume">N/A</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="stock-copy text-center">
+  <p class="m-0">The most recent data point is the cumulative prices and volume information of the current trading day updated in real time.</p>
+</div>
+
+
+<div class="investors container-fluid p-0">
+  <div class="row no-gutters">
+    <div class="col-sm-11 col-sm-offset-1">
+
+
+        <div class="row">
+          <div class="col-sm-6 col-md-5 col-lg-4">
+            <h1 class="color-greenchalk text-uppercase font-weight-bold">Corporate Info</h1>
+            <h3 class="color-cement">Weekend Unlimited Inc.</h3>
+            <p>
+            Ticker Symbol: CSE: POT<br>
+            Industry: Healthcare<br>
+            Transfer Agent: Odyssey Trust Company
+            </p>
+            <h3 class="color-cement">Financial Reporting/Disclosure</h3>
+            <p>
+            Fiscal Year End: September 30th<br>
+            Incorporated: British Columbia, Canada
+            </p>
+            <h3 class="color-cement">Auditors</h3>
+            <p>
+            Davidson & Company LLP<br>
+            1200-609 Granville St,<br>
+            Vancouver, BC V7Y 1G6, Canada
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <h1 class="color-greenchalk text-uppercase font-weight-bold">Investor Relations</h1>
+            <table>
+              <tbody>
+                <tr>
+                  <td><h3 class="color-cement">Phone</h3></td>
+                  <td><h3 class="color-cement">Email</h3></td>
+                </tr>
+                <tr>
+                  <td style="vertical-align: top;"><p><a href="tel:+1 (236) 317 2812">+1 (236) 317 2812</a></p></td>
+                  <td>
+                    <p>
+                    <a href="mailto:info@weekendunlimited.com">info@weekendunlimited.com</a><br>
+                    <a href="mailto:media@weekendunlimited.com">media@weekendunlimited.com</a><br>
+                    <a href="mailto:sales@weekendunlimited.com">sales@weekendunlimited.com</a>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h1 class="color-greenchalk text-uppercase font-weight-bold">Regulatory</h1>
+            <p>SEDAR is the official Canadian website that provides access to all public securities documents and information filed by public companies and investment funds with the Canadian Securities Administrators (CSA) in the SEDAR filing system. The statutory objective in making public this filed information is to enhance investor awareness of the business and affairs of public companies and investment funds and to promote confidence in the transparent operation of capital markets in Canada.</p>
+            <p>View Weekend Unlimited Inc. filings and financial documents <a href="https://www.sedar.com/DisplayProfile.do?lang=EN&issuerType=03&issuerNo=00044982">here.</a></p>
+          </div>
+        </div>
+
+
+    </div>
+  </div>
+</div>

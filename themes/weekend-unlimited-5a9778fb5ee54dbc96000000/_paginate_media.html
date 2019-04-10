@@ -1,0 +1,24 @@
+<div class="news container-fluid p-0">
+  <div class="row no-gutters">
+    <div class="col-sm-11 col-sm-offset-1">
+        <div class="row">
+          {% assign children = tag.most_recent_published_pages | sort: 'published_at' | reverse %}
+          {% for child in children %}
+          <div class="col-lg-5 col-sm-6 {% cycle '', 'col-lg-offset-1' %} media-single">
+            <div class="embed-container">
+              {{ child.excerpt }}
+            </div>
+            <h2 class="color-stone">{{ child.headline }}</h2>
+            <p class="meta-date gill-sans text-uppercase">{{ child.published_at | date: '%B %d, %Y %l:%M %p' }}</p>
+            <hr>
+            {{ child.basic.content }}
+          </div>
+          {% endfor %}
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid p-0 pagination-container">
+  {{  tag.most_recent_published_pages | paginate prev_label: "&laquo;" next_label: "&raquo;" | replace:'<div class="pagination">','' | replace:'<ul>','<ul class="pagination">' | replace:'</div>','' }}
+</div>

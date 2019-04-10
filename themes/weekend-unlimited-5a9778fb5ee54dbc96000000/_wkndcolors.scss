@@ -1,0 +1,46 @@
+$bluepastel: #8dc8e8;
+$bluesky: #41b6e6;
+$fantaorange: #ffb500;
+$oxblood: #93272c;
+$purplechalk: #c069c2;
+$purplewine: #a438a8;
+$greenchalk: #c5e86c;
+$powerblue: #1d428a;
+$stone: #5b6770;
+$cement: #a2aaad;
+
+.color-fantaorange {
+  color: $fantaorange;
+}
+.color-bluesky {
+  color: $bluesky;
+}
+.color-bluepastel {
+  color: $bluepastel;
+}
+.color-greenchalk {
+  color: $greenchalk;
+}
+.color-powerblue {
+  color: $powerblue;
+}
+.color-purplechalk {
+  color: $purplechalk;
+}
+.color-purplewine {
+  color: $purplewine;
+}
+.color-cement {
+  color: $cement;
+}
+.color-stone {
+  color: $stone;
+}
+
+.bg-greenchalk {
+  background: $greenchalk;
+  color: #fff;
+}
+.bg-cement {
+  background: lighten($cement, 30%);
+}

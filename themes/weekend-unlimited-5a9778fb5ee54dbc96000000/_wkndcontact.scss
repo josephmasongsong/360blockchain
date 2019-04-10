@@ -1,0 +1,10 @@
+.contact-header {
+  margin-bottom: 4rem;
+}
+.email-column {
+  border-right: 1px solid lighten($cement, 25%);
+  margin: 4rem auto 6rem;
+  &:last-child {
+    border-right: 0;
+  }
+}

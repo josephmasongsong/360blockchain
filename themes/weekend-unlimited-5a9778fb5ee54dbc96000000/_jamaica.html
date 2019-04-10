@@ -1,0 +1,18 @@
+<div class="container-fluid p-0 bg-cement brand-section" id="rd">
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <h1 class="text-uppercase font-weight-bold">{{ page.headline }}</h1>
+      {{ page.basic.content }}
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid p-0 brand-photos">
+  <div class="row">
+    {% for feature in page.features %}
+    <div class="col-sm-6 col-xs-6 {% cycle 'pl-0', 'pr-0' %}">
+      <div class="ourBrandImage" style="background:url({{ feature.image_url }}) no-repeat center; background-size: cover;"></div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

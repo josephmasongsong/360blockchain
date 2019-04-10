@@ -1,0 +1,53 @@
+<div class="container-fluid p-0">
+  <div class="row no-gutters">
+    <div class="col-sm-11 col-sm-offset-1">
+      <div class="page-header-container">
+        <h1 class="color-purplechalk headline">{{ page.headline }}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class=" news container-fluid p-0">
+  <div class="row no-gutters">
+    <div class="col-sm-10 col-sm-offset-1">
+      {% for child in page.children %}
+      <div class="row product-single">
+        <div class="col-sm-3 col-sm-offset-1">
+          <img src="{% for feature in child.features limit: 1 %}{{ feature.image_url }}{% endfor %}" alt="" class="img-responsive">
+        </div>
+        <div class="col-sm-6 col-sm-offset-1">
+          <h1 class="color-stone text-uppercase font-weight-bold">{{ child.headline }}</h1>
+          {{ child.basic.content }}
+          <p class="text-right color-cement">*WKND! THC formulations are available only in select markets.</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid p-0">
+  <div class="row">
+    <div class="col-sm-5ths col-xs-4">
+      <div class="popArt" style="background:url('https://d3n8a8pro7vhmx.cloudfront.net/360blockchain/pages/712/attachments/original/1554878470/couple.png?1554878470') no-repeat center; background-size: cover;"></div>
+
+    </div>
+    <div class="col-sm-5ths col-xs-4">
+      <div class="popArt" style="background:url('https://d3n8a8pro7vhmx.cloudfront.net/360blockchain/pages/712/attachments/original/1554878484/woman.png?1554878484') no-repeat center; background-size: cover;"></div>
+
+    </div>
+    <div class="col-sm-5ths col-xs-4">
+      <div class="popArt col-xs-6" style="background:url('https://d3n8a8pro7vhmx.cloudfront.net/360blockchain/pages/712/attachments/original/1554878479/zachefron.png?1554878479') no-repeat center; background-size: cover;"></div>
+
+    </div>
+    <div class="col-sm-5ths col-xs-6">
+      <div class="popArt" style="background:url('https://d3n8a8pro7vhmx.cloudfront.net/360blockchain/pages/712/attachments/original/1554878477/man.png?1554878477') no-repeat center; background-size: cover;"></div>
+
+    </div>
+    <div class="col-sm-5ths col-xs-6">
+      <div class="popArt" style="background:url('https://d3n8a8pro7vhmx.cloudfront.net/360blockchain/pages/712/attachments/original/1554878475/blonde.png?1554878475') no-repeat center; background-size: cover;"></div>
+
+    </div>
+  </div>
+</div>

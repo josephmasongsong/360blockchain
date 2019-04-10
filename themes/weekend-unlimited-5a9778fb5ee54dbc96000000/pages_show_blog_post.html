@@ -1,21 +1,31 @@
-<div class="basic-page-header">
-  <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5a9778fb5ee54dbc96000000/attachments/original/1521494719/blobs-01.png?1521494719" alt="">
-  <h1>News</h1>
+
+<div class="container-fluid p-0">
+  <div class="row no-gutters">
+    <div class="col-sm-11 col-sm-offset-1">
+      <div class="page-header-container">
+        <h1 class="color-greenchalk headline">News</h1>
+        <nav class="nav wknd-subnav">
+          <a href="/news">News</a>
+          <a href="/press">Press</a>
+          <a href="/media">Media</a>
+        </nav>
+      </div>
+    </div>
+  </div>
 </div>
 
+<div class="news single-post container-fluid p-0">
+  <div class="row no-gutters">
+    <div class="col-sm-10 col-sm-offset-1">
+      <h1 class="color-stone">{{ page.headline }}</h1>
+      <p class="meta-date gill-sans text-uppercase color-stone">{{ page.published_at | date: '%B %d, %Y %l:%M %p' }}</p>
+      {{ page.blog_post.content }}
+      <hr>
+      {{ page.blog_post.content_flip }}
+    </div>
+  </div>
+</div>
 
-
-  <section class=" bg-white blog-post">
-    <div class="container">
-
-		<h1 class="news-title">{{ page.headline }}</h1>
-		<span class='date'>{{ page.published_at | date: '%B %d, %Y %l:%M %p' }}</span>
-		{{ page.blog_post.content_full }}
-		<div class="like-page">
-			{% include "like_page" %}				
-		</div>
-
-    </div>  
-
-  </section>
-  {% subpage "newsletter" with "newsletter" %}
+{% comment %}
+{% subpage "forward" with "forward" %}
+{% endcomment %}

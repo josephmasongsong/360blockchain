@@ -1,0 +1,35 @@
+<h1 class="color-stone text-center contact-header">{{ page.excerpt }}</h1>
+
+
+<div class="container-fluid contact">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h3>Phone</h3>
+      <p class="lead gill-sans font-weight-normal"><a href="tel:12363172812" class="color-cement">+1 (236) 317-2812</a></p>
+    </div>
+    <div class="col-sm-4 text-center email-column">
+      <h3>General Inquiries</h3>
+      <p class="lead gill-sans font-weight-normal"><a href="mailto:info@weekendunlimited.com" class="color-cement">info@weekendunlimited.com</a></p>
+    </div>
+    <div class="col-sm-4 text-center email-column">
+      <h3>Press & Media</h3>
+      <p class="lead gill-sans font-weight-normal"><a href="mailto:media@weekendunlimited.com" class="color-cement">media@weekendunlimited.com</a></p>
+    </div>
+    <div class="col-sm-4 text-center email-column">
+      <h3>Sales</h3>
+      <p class="lead gill-sans font-weight-normal"><a href="mailto:sales@weekendunlimited.com" class="color-cement">sales@weekendunlimited.com</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid p-0">
+  <div class="row">
+    {% for feature in page.features %}
+
+    <div class="col-xs-6 {% cycle 'pl-0', 'pr-0' %}">
+      <div class="brandImage" style="background:url({{ feature.image_url }}) no-repeat center; background-size: cover;"></div>
+    </div>
+
+    {% endfor %}
+  </div>
+</div>

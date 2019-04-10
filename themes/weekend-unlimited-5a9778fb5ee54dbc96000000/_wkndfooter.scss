@@ -1,0 +1,81 @@
+
+
+footer {
+  margin: 0 !important;
+  font-family: 'Gill Sans';
+  border-top: 1px solid lighten($cement, 25%);
+
+  .top {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    .footer-column {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      border-right: 1px solid lighten($cement, 25%);
+      a {
+        color: #222;
+      }
+      &:last-child {
+        border-right: 0;
+      }
+      &.wknd-logo {
+        img {
+          width: 260px;
+          margin: 0 auto;
+        }
+      }
+      .footer-menu-header {
+        margin: 0;
+        font-family: 'Gill Sans';
+        font-size: 1rem;
+        letter-spacing: 0.075em;
+        text-transform: uppercase;
+        color: $cement;
+      }
+      strong, .strong {
+        font-weight: 500;
+      }
+      .mt-2 {
+        margin-top: 2rem;
+      }
+      .list-unstyled li {
+        a {
+          color: #222;
+        }
+      }
+    }
+  }
+  .bottom {
+    width: 100%;
+    background:#222;
+    padding: 1rem 2rem;
+    color: #fff;
+    .list-inline.list-unstyled {
+      margin-bottom: 0;
+      li {
+        padding: 0;
+      }
+    }
+    .fa-stack {
+      display: inline-block;
+      font-size: 0.875rem;
+    }
+    .fa-facebook-f, .fa-twitter, .fa-instagram {
+      color: #222;
+    }
+    a {
+      color: #fff;
+    }
+    p {
+      margin: 0;
+      letter-spacing: 0.075em;
+      font-weight: 300;
+    }
+    .stock-symbol {
+      font-size: 1.25rem;
+    }
+    .copy {
+      line-height: 1.8;
+    }
+  }
+}

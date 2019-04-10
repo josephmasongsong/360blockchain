@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="row">
+    {% for feature in page.features %}
+    <div class="col-xs-4 {% cycle 'pl-0',' ','pr-0' %}">
+      <div class="brandImage" style="background:url({{ feature.image_url }}) no-repeat center; background-size: cover;"></div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<div class="after-the-fold text-center">
+  <h1 class="callout-text m-0">
+    <span class="color-powerblue">
+      {{ page.excerpt }}
+    </span>
+  </h1>
+</div>

@@ -1,0 +1,235 @@
+
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #333;
+  font-family: "Garamond Pro", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
+    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
+    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
+    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+    font-size: 1rem;
+}
+
+$bluepastel: #8dc8e8;
+$bluesky: #41b6e6;
+$fantaorange: #ffb500;
+$oxblood: #93272c;
+$purplechalk: #c069c2;
+$purplewine: #a438a8;
+$greenchalk: #c5e86c;
+$powerblue: #1d428a;
+$stone: #5b6770;
+$cement: #a2aaad;
+
+.color-fantaorange {
+  color: $fantaorange;
+}
+.color-bluesky {
+  color: $bluesky;
+}
+.color-bluepastel {
+  color: $bluepastel;
+}
+.color-greenchalk {
+  color: $greenchalk;
+}
+.color-powerblue {
+  color: $powerblue;
+}
+.color-purplechalk {
+  color: $purplechalk;
+}
+.color-purplewine {
+  color: $purplewine;
+}
+.color-cement {
+  color: $cement;
+}
+.color-stone {
+  color: $stone;
+}
+
+.bg-greenchalk {
+  background: $greenchalk;
+  color: #fff;
+}
+.bg-cement {
+  background: lighten($cement, 30%);
+}
+
+a {
+  &:hover {
+    color: $bluesky;
+  }
+  &:active {
+    color: $powerblue;
+  }
+}
+
+#wrapper {
+  overflow-x: hidden;
+}
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-xs-8r,
+.col-sm-8r,
+.col-md-8r,
+.col-lg-8r {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-8r {
+    width: 12.5%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-8r {
+        width: 12.5%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-8r {
+        width: 12.5%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-8r {
+        width: 12.5%;
+        float: left;
+    }
+}
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+.popArt {
+  height: 285px;
+  width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Gill Sans';
+  margin: 0;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.gill-sans {
+  font-family: 'Gill Sans';
+}
+
+.font-weight-light {
+  font-weight: 300;
+}
+.font-weight-normal {
+  font-weight: normal;
+}
+.font-weight-bolder {
+  font-weight: 500;
+}
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.pagination-container {
+  border-top: 1px solid lighten($cement, 25%);
+  padding:4rem 0;
+  margin-top: 3rem;
+  text-align: center;
+  .pagination {
+    margin: 0;
+  }
+  .pagination, .pagination li, .pagination li a {
+    border: 0;
+  }
+  .pagination li a {
+    font-family: 'Gill Sans';
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: $greenchalk;
+    &:hover {
+      color: $bluesky;
+      background: transparent;
+    }
+  }
+  .pagination>.active>a {
+    color: #92c07e;
+    background: transparent;
+  }
+}
+
+@import "wkndsplash";
+@import "wkndpages";
+@import "wkndcontact";
+@import "wkndnav";
+@import "wkndfooter";
+@import "wkndmobile";

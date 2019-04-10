@@ -1,0 +1,18 @@
+<div class="container-fluid product-slider-section">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-1 col-sm-12 products-header-container">
+
+      <h1 class="color-stone products-header">{{ page.headline }}</h1>
+
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <div class="product-slider">
+        {% for feature in page.features %}
+        <a class="product-slide" href="/our-products">
+          <img src="{{ feature.image_url }}" class="img-responsive">
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

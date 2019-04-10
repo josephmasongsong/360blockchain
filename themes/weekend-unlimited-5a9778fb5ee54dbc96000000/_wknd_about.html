@@ -1,0 +1,11 @@
+<div class="wknd-splash-variant" style="background: url({% for feature in page.features %}{{ feature.image_url }}{% endfor %}); background-size: cover;" id="aboutus">
+  <h1 class="callout-text">
+    {{ page.headline }}
+  </h1>
+  <p class="callout-subtext">
+    {{ page.basic.content | strip_html }}
+  </p>
+  <a href="#" class="learn-more">
+    {{ page.excerpt }}
+  </a>
+</div>

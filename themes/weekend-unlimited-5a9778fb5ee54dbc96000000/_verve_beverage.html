@@ -1,0 +1,20 @@
+
+
+<div class="container-fluid p-0 bg-cement  brand-section" id="verve">
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <div class="row">
+        <div class="col-sm-9">
+          <h1 class="text-uppercase font-weight-bold">{{ page.headline }}</h1>
+          {{ page.basic.content }}
+        </div>
+        <div class="col-sm-3">
+          {% for feature in page.features limit: 1%}
+          <img src="{{ feature.image_url }}" class="img-responsive">
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

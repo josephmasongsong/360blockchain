@@ -1,0 +1,10 @@
+
+
+{% for child in page.children %}
+<div class="col-sm-4 col-xs-6">
+  <h2 class="text-uppercase">{{ child.headline }}</h2>
+  <p class="lead font-weight-normal color-cement gill-sans">
+    {{ child.excerpt }}
+  </p>
+</div>
+{% endfor %}

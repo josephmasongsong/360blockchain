@@ -7,42 +7,34 @@
 
     <title>{{ page_title }}</title>
 
-    <script src="https://use.fontawesome.com/e404551e3e.js"></script>
 
     <!-- Bootstrap -->
-    <link href="animate.css" rel="stylesheet">
     <link href="theme.scss" rel="stylesheet">
-    <link href="jquery.fullpage.css" rel="stylesheet">
-    <link href="font_brandon.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/flexslider.min.css" rel="stylesheet">
-    <link href="popup-slider.css" rel="stylesheet">
-    <link href="weekendunlimited.scss" rel="stylesheet">
+
+
+    <link href="wkndfonts.css" rel="stylesheet">
+    <link href="wkndnew.scss" rel="stylesheet">
+
     {% if page.is_homepage? == true %}
     <link href="age-verification.css" rel="stylesheet">
-    <link href="modal-video.min.css" rel="stylesheet">
     {% endif %}
     {{ content_for_header }}
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <script type="text/javascript">
       NB.appConfig.userIsLoggedIn = {{request.logged_in?}};
     </script>
   </head>
-  <body class="{{ page.page_class_name }} page-{{ request.template | replace: '_', '-' }} page-{{ page.slug | replace: '_', '-' }} js">
+  <body class="{% unless page.slug == 'wknd_splash' %}{{ page.page_class_name }}{% endunless %} page-{{ request.template | replace: '_', '-' }} page-{{ page.slug | replace: '_', '-' }} js">
     <div id="wrapper">
 
       {{ content_for_notifications }}
 
-    {% if page.slug == 'landing_page' %}
-
-      {% include 'nav' %}
-
-    {% elsif page.slug != 'landing_page' and page.slug != 'under_construction' %}
-
-      {% include 'static_nav' %}
-
-    {% elsif page.slug == 'under_construction' %}
-
-    {% endif %}
+      {% unless page.slug == 'wknd_splash' %}
+      {% include 'wkndheader' %}
+      {% endunless %}
 
       {% if request.is_sidebar? %}
       {% include "columns_1" %}
@@ -51,35 +43,63 @@
       {% endif %}
 
 
-      {% unless page.slug == 'under_construction' %}
       <footer>
         {{ content_for_footer }}
-        {% include 'footer_content' %}
+        {% include 'wknd_footer' %}
       </footer>
-      {% else %}
-        {{ content_for_footer }}
-      {% endunless %}
 
     </div>
 
     <script src="bootstrap.js"></script>
-    <script src="jquery.fullpage.js"></script>
-    <script src="scrolloverflow.js"></script>
-    <script src="fullpage.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider-min.js"></script>
-    <script src="popup-slider.js"></script>
 
+
+
+
+    {% if page.slug == "wknd_splash" %}
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.wknd-slider').slick({
+          dots: false,
+          arrows: false,
+          autoplay: true,
+          fade: true,
+          pauseOnHover: true
+        });
+      });
+      $(document).ready(function(){
+        $('.product-slider').slick({
+          dots: false,
+          arrows: false,
+          autoplay: true,
+          pauseOnHover: true
+        });
+      });
+      $(window).scroll(function() {
+        if ($(document).scrollTop() > 50) {
+          $('#wkndnavhome').removeClass('navbar-static-top');
+          $('#wkndnavhome').addClass('navbar-fixed-top');
+          $('#wkndnavhome').addClass('navbar-inverse');
+
+        } else {
+          $('#wkndnavhome').removeClass('navbar-fixed-top');
+          $('#wkndnavhome').removeClass('navbar-inverse');
+          $('#wkndnavhome').addClass('navbar-static-top');
+        }
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
+    <script src="instafeed.js"></script>
+    {% endif %}
+    {% if page.slug == 'our-company' %}
+    <script src="stockquote.js"></script>
+    {% endif %}
+    {% if page.slug == 'our-brands' %}
+    <script src="brands.js"></script>
+    {% endif %}
     {% if page.is_homepage? == true %}
-    <script src="jquery-modal-video.min.js"></script>
-    <script src="wow.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script src="age-verification.js"></script>
-    <script src="site.js"></script>
     {% endif %}
-
-    {% if page.slug == "stock_quote" %}
-    <script type="text/javascript" src="stock.quote.js"></script>
-    {% endif %}
-
   </body>
 </html>

@@ -1,41 +1,42 @@
-
-<div class="basic-page-header">
-  <img src="https://d3n8a8pro7vhmx.cloudfront.net/themes/5a9778fb5ee54dbc96000000/attachments/original/1521494719/blobs-01.png?1521494719" alt="">
-  <h1>{{page.headline}}</h1>
+<div class="container-fluid p-0">
+  <div class="row no-gutters">
+    <div class="col-sm-11 col-sm-offset-1">
+      <div class="page-header-container">
+        <h1 class="color-greenchalk headline">{{ page.headline }}</h1>
+        <nav class="nav wknd-subnav">
+          <a href="/news">News</a>
+          <a href="/press">Press</a>
+          <a href="/media">Media</a>
+        </nav>
+      </div>
+    </div>
+  </div>
 </div>
 
-
-<section class="bg-white basic-page-section">
-  <div class="container">
-
-    <ul class='list-inline subnavigation'>
-      <li class='active'><a href="/news">News</a></li>
-      <li><a href="/press">Press</a></li>
-      <li><a href="/media">Media</a></li>
-    </ul>
+<div class="news container-fluid p-0">
+  <div class="row no-gutters">
+    <div class="col-sm-11 col-sm-offset-1">
 
 
+        <div class="row">
+          {% for post in page.blog.most_recent_blog_posts %}
+          <div class="col-sm-6 col-lg-5 {% cycle '', 'col-lg-offset-1' %}">
+            <h2 class="color-stone">{{ post.headline }}</h2>
+            <p class="meta-date gill-sans text-uppercase color-stone">{{ post.published_at | date: '%B %d, %Y %l:%M %p' }}</p>
+            <hr>
+            {{ post.blog_post.content }}
+            {% if post.blog_post.is_extended? %}
+            <a class="read-more gill-sans color-greenchalk text-uppercase font-weight-bolder" href="{{ post.url }}">Read More</a>
+            {% endif %}
+          </div>
+          {% endfor %}
 
-    {% for post in page.blog.most_recent_blog_posts %}
+        </div>
 
-    <a href="{{ post.url }}"><h2>{{ post.headline }}</h2></a>
-    <span class="date">{{ post.published_at | date: '%B %d, %Y %l:%M %p' }}</span>
-    {{ post.blog_post.content }}
-    
-    {% if post.blog_post.is_extended? %}
-    <span class='read-more'><a href='{{ post.url }}'>More</a></span>
-    {% endif %}
+    </div>
+  </div>
+</div>
 
-    <hr>     
-    
-    {% endfor %}
-
-
-    {{ page.blog.most_recent_blog_posts | paginate prev_label: "&laquo;" next_label: "&raquo;" | replace:'<div class="pagination">','<nav class="pagination-container">' | replace:'<ul>','<ul class="pagination">' | replace:'</div>','</nav>' }}
-
-  </div>  
-</section>
-
-{% subpage "newsletter" with "newsletter" %}
-
-
+<div class="container-fluid p-0 pagination-container">
+  {{ page.blog.most_recent_blog_posts | paginate prev_label: "&laquo;" next_label: "&raquo;" | replace:'<div class="pagination">','' | replace:'<ul>','<ul class="pagination">' | replace:'</div>','' }}
+</div>

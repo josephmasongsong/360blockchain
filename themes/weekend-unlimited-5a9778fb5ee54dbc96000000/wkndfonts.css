@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('gillsans-medium.woff') format('woff2'),
+        url('gillsans-medium.woff2') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('gillsans.woff2') format('woff2'),
+        url('gillsans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('gillsans-light.woff2') format('woff2'),
+        url('gillsans-light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('gillsans-bold.woff2') format('woff2'),
+        url('gillsans-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Garamond Pro';
+    src: url('agaramondpro-bold.woff2') format('woff2'),
+        url('agaramondpro-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Garamond Pro';
+    src: url(' agaramondpro-regular.woff2') format('woff2'),
+        url('agaramondpro-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

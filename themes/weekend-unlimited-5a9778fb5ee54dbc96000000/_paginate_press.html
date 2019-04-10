@@ -1,0 +1,29 @@
+
+
+
+<div class=" news container-fluid p-0">
+  <div class="row no-gutters">
+    <div class="col-sm-11 col-sm-offset-1">
+      <div class="row">
+        {% assign children = tag.most_recent_published_pages | sort: 'published_at' | reverse %}
+        {% for child in children %}
+        <div class="col-sm-3 col-sm-offset-1">
+          <img src="{% for feature in child.features limit: 1 %}{{ feature.image_url }}{% endfor %}" alt="" class="img-responsive">
+        </div>
+        <div class="col-sm-6 col-sm-offset-1 ">
+          <h2 class="color-stone">
+            {{ child.headline }}
+          </h2>
+          <p class="meta-date gill-sans text-uppercase color-stone">{{ child.published_at | date: '%B %d, %Y' }}</p>
+          <hr>
+          <a class="read-more gill-sans color-greenchalk text-uppercase font-weight-bolder" href="{{ child.excerpt }}">Read More</a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid p-0 pagination-container">
+  {{  tag.most_recent_published_pages | paginate prev_label: "&laquo;" next_label: "&raquo;" | replace:'<div class="pagination">','' | replace:'<ul>','<ul class="pagination">' | replace:'</div>','' }}
+</div>

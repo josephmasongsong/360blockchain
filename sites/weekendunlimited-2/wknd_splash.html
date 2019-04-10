@@ -1,0 +1,67 @@
+<div class="wknd-splash">
+  <div class="wknd-logo-small">
+    <img src="https://d3n8a8pro7vhmx.cloudfront.net/360blockchain/pages/691/attachments/original/1554821352/wknd-logo.png?1554821352" alt="Welcome to your new Weekend">
+  </div>
+  <nav class="navbar navbar-static-top" role="navigation" id="wkndnavhome">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">About Us</a></li>
+        <li><a href="/our-brands">Our Brands</a></li>
+        <li><a href="/our-company">Our Company</a></li>
+        <li><a href="/news">News</a></li>
+        <li><a href="/get-in-touch">Get In Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="social-media-icons">
+    <a href="https://www.facebook.com/weekendunlimited/" target="_blank">
+      <span class="fa-stack fa-2x">
+        <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
+        <i class="fab fa-facebook-f fa-stack-1x" ></i>
+      </span>
+    </a>
+    <a href="https://www.instagram.com/weekendunlimited" target="_blank">
+      <span class="fa-stack fa-2x">
+        <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
+        <i class="fab fa-instagram fa-stack-1x" ></i>
+      </span>
+    </a>
+  </div>
+  <div class="stock-symbol">
+    CSE : <strong>POT</strong>
+  </div>
+  <div class="wknd-splash wknd-slider">
+    {% for feature in page.features %}
+    <div class="wknd-slide"  style="background: url({{ feature.image_url }}) center; background-size: cover;">
+      <div class="tagline text-center">
+        {{ feature.headline }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="text-center after-the-fold">
+  <h1 class="callout-text">
+    {{ page.headline }}
+  </h1>
+  <p class="callout-subtext">
+    {{ page.excerpt }}
+  </p>
+</div>
+
+{% subpage "products_slider" with "products_slider" %}
+{% subpage "below_the_fold" with "below_the_fold" %}
+{% subpage "wknd_brands" with "wknd_brands" %}
+{% subpage "wknd_about" with "wknd_about" %}
+{% subpage "wknd_follow" with "wknd_follow" %}
