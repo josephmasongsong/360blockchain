@@ -35,6 +35,9 @@ $cement: #a2aaad;
 .color-greenchalk {
   color: $greenchalk;
 }
+.color-greenleaf {
+  color: #92c07e;
+}
 .color-powerblue {
   color: $powerblue;
 }
@@ -82,12 +85,17 @@ a {
 }
 
 .row {
+  &:before, &:after {
+    content: " ";
+    display: flex !important;
+  }
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display:         flex;
   flex-wrap: wrap;
 }
+
 .row > [class*='col-'] {
   display: flex;
   flex-direction: column;
@@ -225,6 +233,19 @@ h1,h2,h3,h4,h5,h6 {
     color: #92c07e;
     background: transparent;
   }
+}
+
+.contact-table {
+  a {
+    color: #333;
+  }
+  td {
+    padding-right: 2rem;
+  }
+}
+
+.navbar-inverse {
+  background: $stone;
 }
 
 @import "wkndsplash";

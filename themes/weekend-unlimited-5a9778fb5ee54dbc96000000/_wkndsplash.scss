@@ -12,7 +12,6 @@
   font-size: 2rem;
 }
 
-
 .wknd-splash {
   height: 100vh;
   width: 100%;
@@ -199,10 +198,10 @@
 }
 .the-brands {
   .no-gutters {
-    .col-sm-3 {
+    .col-sm-3, .col-sm-5ths {
       border-bottom: 1px solid  lighten($cement, 25%);
       border-right: 1px solid  lighten($cement, 25%);
-      &:nth-child(4n) {
+      &:nth-child(5n) {
         border-right: 0;
       }
     }
@@ -230,7 +229,7 @@
 
 .product-slider-section {
   border-top: 1px solid  lighten($cement, 25%);
-  padding:6rem 0;
+  padding:0rem 0rem 6rem;
   .products-header-container {
     text-align: right;
     .products-header {

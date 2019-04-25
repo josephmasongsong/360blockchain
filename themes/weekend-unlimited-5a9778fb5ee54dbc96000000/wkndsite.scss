@@ -17,6 +17,24 @@ body {
 #wrapper {
   overflow-x: hidden;
 }
+
+.row {
+  &:before, &:after {
+    content: " ";
+    display: flex !important;
+  }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+}
+
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
 .row.no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -25,18 +43,6 @@ body {
 .row.no-gutters > [class*=" col-"] {
   padding-right: 0;
   padding-left: 0;
-}
-
-.row {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
-  flex-wrap: wrap;
-}
-.row > [class*='col-'] {
-  display: flex;
-  flex-direction: column;
 }
 
 .col-xs-8r,

@@ -1,4 +1,4 @@
-<div class="container-fluid p-0  brand-section" id="northernlights">
+<div class="container-fluid p-0 bg-cement brand-section" id="northernlights">
   <div class="row">
     <div class="col-sm-10 col-sm-offset-1">
       <h1 class="text-uppercase font-weight-bold">{{ page.headline }}</h1>
@@ -6,12 +6,16 @@
     </div>
   </div>
 </div>
-<div class="container-fluid p-0 brand-photos">
+<div class="container-fluid bg-cement p-0 brand-photos" style="padding-bottom: 4rem;">
   <div class="row">
-    {% for feature in page.features %}
-    <div class="col-sm-4 col-xs-4 {% cycle 'pl-0', ' ', 'pr-0' %}">
-      <div class="ourBrandImage" style="background:url({{ feature.image_url }}) no-repeat center; background-size: cover;"></div>
+    <div class="col-sm-10 col-sm-offset-1">
+      <div class="row">
+        {% for feature in page.features %}
+        <div class="col-sm-4 col-xs-4 {% cycle 'pl-0', ' ', 'pr-0' %}">
+          <div class="ourBrandImage" style="background:url({{ feature.image_url }}) no-repeat center; background-size: cover;"></div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
-    {% endfor %}
   </div>
 </div>

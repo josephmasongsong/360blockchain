@@ -2,7 +2,7 @@
   <div class="row no-gutters">
     <div class="col-sm-11 col-sm-offset-1">
       <div class="page-header-container">
-        <h1 class="color-stone headline">{{ page.headline }}</h1>
+        <h1 class="color-greenleaf headline">{{ page.headline }}</h1>
       </div>
     </div>
   </div>
@@ -14,7 +14,7 @@
 
       <section class="team-leaders">
 
-        <h1 class="color-greenchalk text-uppercase font-weight-bold">Team Leaders</h1>
+        <h1 class="color-stone text-uppercase font-weight-bold">Team Leaders</h1>
 
         <div class="row">
           {% subpage "team_leaders" with "team_leaders" %}
@@ -32,7 +32,7 @@
 <section class="stock-quote" style="background:url({% for feature in page.features limit: 1%}{{ feature.image_url }}{% endfor %}) no-repeat center; background-size: cover;">
   <div class="stock-quote-contents">
     <h4 class="stock-header">Stock Quote</h4>
-    <h1 class="font-weight-light exchange-header">Canadian Securities Exchange: <strong>POT</strong></h1>
+    <h1 class="font-weight-light exchange-header">CANADIAN SECURITIES EXCHANGE: <strong>POT</strong></h1>
     <div class="container-fluid stock-ticker">
       <div class="col-sm-2 col-sm-offset-1 col-xs-6">
         <h3>Open</h3>
@@ -69,7 +69,7 @@
 
         <div class="row">
           <div class="col-sm-6 col-md-5 col-lg-4">
-            <h1 class="color-greenchalk text-uppercase font-weight-bold">Corporate Info</h1>
+            <h1 class="color-stone text-uppercase font-weight-bold">Corporate Info</h1>
             <h3 class="color-cement">Weekend Unlimited Inc.</h3>
             <p>
             Ticker Symbol: CSE: POT<br>
@@ -89,8 +89,8 @@
             </p>
           </div>
           <div class="col-sm-6">
-            <h1 class="color-greenchalk text-uppercase font-weight-bold">Investor Relations</h1>
-            <table>
+            <h1 class="color-stone text-uppercase font-weight-bold">Investor Relations</h1>
+            <table class="contact-table">
               <tbody>
                 <tr>
                   <td><h3 class="color-cement">Phone</h3></td>
@@ -108,7 +108,7 @@
                 </tr>
               </tbody>
             </table>
-            <h1 class="color-greenchalk text-uppercase font-weight-bold">Regulatory</h1>
+            <h1 class="color-stone text-uppercase font-weight-bold">Regulatory</h1>
             <p>SEDAR is the official Canadian website that provides access to all public securities documents and information filed by public companies and investment funds with the Canadian Securities Administrators (CSA) in the SEDAR filing system. The statutory objective in making public this filed information is to enhance investor awareness of the business and affairs of public companies and investment funds and to promote confidence in the transparent operation of capital markets in Canada.</p>
             <p>View Weekend Unlimited Inc. filings and financial documents <a href="https://www.sedar.com/DisplayProfile.do?lang=EN&issuerType=03&issuerNo=00044982">here.</a></p>
           </div>

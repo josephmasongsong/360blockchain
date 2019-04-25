@@ -33,7 +33,33 @@
       {{ content_for_notifications }}
 
       {% unless page.slug == 'wknd_splash' %}
-      {% include 'wkndheader' %}
+      <div class="wknd-splash">
+        <a href="/" class="wknd-logo-small" style="display:block;">
+          <img src="https://d3n8a8pro7vhmx.cloudfront.net/360blockchain/pages/691/attachments/original/1554821352/wknd-logo.png?1554821352" alt="Welcome to your new Weekend">
+        </a>
+        <nav class="navbar navbar-static-top" role="navigation" id="wkndnavhome">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+              {% for child in site.root_nav_pages %}
+              {% if child.leaf? or child.nav_children.size == 0 %}
+                <li {% if child.is_or_is_ancestor_of_current_page? %}class="active"{% endif %}>
+                  <a href="{{ child.url }}">{{ child.name }}</a>
+                </li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        </nav>
+      </div>
       {% endunless %}
 
       {% if request.is_sidebar? %}
@@ -75,6 +101,11 @@
           pauseOnHover: true
         });
       });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
+    <script src="instafeed.js"></script>
+    {% endif %}
+    <script>
       $(window).scroll(function() {
         if ($(document).scrollTop() > 50) {
           $('#wkndnavhome').removeClass('navbar-static-top');
@@ -88,9 +119,6 @@
         }
       });
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
-    <script src="instafeed.js"></script>
-    {% endif %}
     {% if page.slug == 'our-company' %}
     <script src="stockquote.js"></script>
     {% endif %}

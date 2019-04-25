@@ -47,7 +47,7 @@ footer {
   }
   .bottom {
     width: 100%;
-    background:#222;
+    background: $stone;
     padding: 1rem 2rem;
     color: #fff;
     .list-inline.list-unstyled {
@@ -61,7 +61,7 @@ footer {
       font-size: 0.875rem;
     }
     .fa-facebook-f, .fa-twitter, .fa-instagram {
-      color: #222;
+      color: $stone;
     }
     a {
       color: #fff;
