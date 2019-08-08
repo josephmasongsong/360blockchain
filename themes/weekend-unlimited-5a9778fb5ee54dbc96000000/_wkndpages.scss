@@ -1,4 +1,4 @@
-.page-type-basic, .page-type-blog, .page-type-blog-post {
+.page-type-basic, .page-type-blog, .page-type-blog-post, .page-user-sessions-new-wide, .page-pages-show-signup {
   #wkndnavhome.navbar-static-top .nav>li>a {
     color: $stone;
   }
@@ -283,5 +283,36 @@ h1.headline {
     img {
       width: 140px;
     }
+  }
+}
+
+.wkndform {
+  .form-control, .form-group>select, #donation_amount_other, #pledge_amount_other, .page-pages-show-donation-v2-wide .donation-other-input-container input, .page-pages-show-donation-v2-wide .donation-v2-input {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 12px;
+    font-size: 16px;
+    line-height: 1.42858;
+    color: #555;
+    background-color: #ececec;
+    background-image: none;
+    border: 1px solid #ececec;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+  }
+  .btn-primary.btn-lg {
+    background: #41b6e6;
+    border-color: #41b6e6;
+    font-family: 'Gill Sans';
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.0675rem;
+    border-radius: 0;
+    padding: 16px 16px 12px;
   }
 }

@@ -20,15 +20,16 @@
   </head>
   <body class="aware-theme v2-theme {{ page.page_class_name }} page-{{ request.template | replace: '_', '-' }} js">
 
-    {% unless page.slug == 'landing_page' %}
+    {% unless page.slug == 'landing_page' or page.slug == 'disclaimer' %}
     {% include "nav" %}
     {% endunless %}
 
-    {% unless page.type_name == "Donation (v2)" %}
+    {% unless page.type_name == "Donation (v2)" or page.slug == 'disclaimer' %}
     {% if site.has_header_image? and page.features_count == 0 %}
     <div class="container header-image-container">
      <img src="{{ site.header_image_url_1026 }}" class="header-image img-responsive" border="0" />
      <a href="mailto:info@worldhighlife.uk" class="glass"><i class="far fa-envelope"></i>info@worldhighlife.uk</a>
+     <a href="/disclaimer" style="display: block; margin-top: 24px; color: white; text-decoration: underline;">Disclaimer</a>
     </div>
     {% endif %}
     {% endunless %}
@@ -56,7 +57,7 @@
     {% endunless %}
 
     <footer>
-      {% unless page.slug == 'landing_page' %}
+      {% unless page.slug == 'landing_page' or page.slug == 'disclaimer' %}
       <div class="container {% if site.has_background_image? %}well well-lg{% endif %}">
 
         {{ content_for_footer }}

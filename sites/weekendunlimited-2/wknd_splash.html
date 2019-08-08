@@ -15,7 +15,9 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav">
         <li class="active"><a href="/">About Us</a></li>
+        {% comment %}
         <li><a href="/our-brands">Our Brands</a></li>
+        {% endcomment %}
         <li><a href="/our-company">Our Company</a></li>
         <li><a href="/news">News</a></li>
         <li><a href="/get-in-touch">Get In Touch</a></li>
@@ -37,9 +39,11 @@
       </span>
     </a>
   </div>
+  {% comment %}
   <div class="stock-symbol">
     CSE : <strong>POT</strong>
   </div>
+  {% endcomment %}
   <div class="wknd-splash wknd-slider">
     {% for feature in page.features %}
     <div class="wknd-slide"  style="background: url({{ feature.image_url }}) center; background-size: cover;">
@@ -60,7 +64,10 @@
   </p>
 </div>
 
+{% comment %}
 {% subpage "products_slider" with "products_slider" %}
+{% endcomment %}
+
 {% subpage "below_the_fold" with "below_the_fold" %}
 {% subpage "wknd_brands" with "wknd_brands" %}
 {% subpage "wknd_about" with "wknd_about" %}
